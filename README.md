@@ -1,1 +1,1 @@
-A one stop for African dishes
+A restaurant app for African dishes
