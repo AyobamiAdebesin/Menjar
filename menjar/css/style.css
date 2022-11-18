@@ -1,0 +1,154 @@
+/* HTML Elements */
+
+body {
+    font-family: 'Markazi Text', serif;
+    margin: 2rem 0 0;
+    background-color: #ffba00;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-top: 3.5rem;
+    margin-bottom: 1rem;
+}
+
+h2 {
+    font-size: 2rem;
+    color: white;
+}
+
+p {
+    font-size: 1.25rem;
+    line-height: 1.5rem;;
+}
+
+header {
+    display: flex;
+    background-color: #CD201F;
+    height: 6rem;
+    padding: .5rem 1rem;
+    border-radius: 0 0 1rem 1rem;
+    position: absolute;
+    top: -2rem;
+    left:40rem;
+}
+
+header div > img {
+    width: 4rem;
+}
+
+
+
+section {
+    margin: 0 20%;
+}
+
+article {
+    padding: 5rem 2rem;
+}
+
+
+
+/* NAVIGATION SECTION */
+
+.nav {
+    padding: .3rem;
+    margin: 0 20%;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.nav a {
+    text-decoration: none;
+    font-size: 1.2rem;
+    padding: 0 1rem;
+    color: white;
+}
+
+.nav a:hover {
+    color: #CD201F;
+}
+
+nav ul {
+    list-style: none;
+    text-align: center;
+}
+
+nav li {
+    display: inline-block;
+}
+
+button {
+    background-color: #CD201F;
+    padding: .5rem 1rem;
+    border-radius: 1rem;
+    border: none;
+    color: white;
+    font-size: 1.2rem;
+}
+
+button:hover {
+    background-color: white;
+    color: #CD201F;
+}
+
+.cart {
+    width: 1.3rem;
+}
+
+/* HERO SECTION */
+
+.hero_section {
+    margin: 5rem 0;
+    color: white;
+}
+
+.hero_section_main {
+    display: flex;
+}
+
+.hero_sub {
+    color: #CD201F;
+    font-weight: bold;
+    font-size: 2rem;
+    margin: 0 1rem;
+    
+}
+
+.hero_heading {
+    font-size: 6rem;
+    font-weight: 900;
+    line-height: 5rem;
+    margin-top: 1rem;
+}
+
+.hero_img {
+    display: grid;
+    margin: auto;
+    width: 120%;
+}
+
+
+.hero_box_item {
+    display: flex;    
+}
+
+.hero_box_item h4 {
+    padding: 0 1rem;
+}
+
+.hero_box {
+    display: flex;
+    justify-content: space-around;
+    background-color: #CD201F;
+    border-radius: 1rem;
+    padding: 3rem 1rem;
+    margin: -15rem 0 0 0;
+}
