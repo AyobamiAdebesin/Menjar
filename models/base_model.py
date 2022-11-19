@@ -9,6 +9,7 @@ import sys
 import sqlaclchemy
 from sqlalchemy.ext import declarative_base
 
+
 class BaseModel:
     """ Base Model for all classes """
     def __init__(self, *args, **kwargs):
@@ -33,7 +34,7 @@ class BaseModel:
         return "[{}] ({}) {}".format(
                 self.__class__.__name__,
                 self.id, self.__dict__)
-    
+
     def save(self):
         """ Updated the public instance attribute updated_at
         with the current datetime """
@@ -41,7 +42,7 @@ class BaseModel:
 
     def to_dict(self):
         """
-        Returns a dictionary containing all key/value of 
+        Returns a dictionary containing all key/value of
         the __dict__ attribute of the instance"""
         new_dict = self.__dict__.copy()
         new_dict['__class__'] = self.__class__.__name__
