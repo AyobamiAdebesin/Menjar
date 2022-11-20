@@ -3,7 +3,7 @@
 body {
     font-family: 'Markazi Text', serif;
     margin: 2rem 0 0;
-    background-color: #ffba00;
+    background-color: #fbbe36;
 }
 
 h1 {
@@ -14,7 +14,6 @@ h1 {
 
 h2 {
     font-size: 2rem;
-    color: white;
 }
 
 p {
@@ -23,14 +22,11 @@ p {
 }
 
 header {
-    display: flex;
-    background-color: #CD201F;
-    height: 6rem;
+    background-color: #e7272d;
+    height: 7rem;
     padding: .5rem 1rem;
     border-radius: 0 0 1rem 1rem;
-    position: absolute;
-    top: -2rem;
-    left:40rem;
+    margin-top: -2.5rem;
 }
 
 header div > img {
@@ -39,9 +35,9 @@ header div > img {
 
 
 
-section {
+/* section {
     margin: 0 20%;
-}
+} */
 
 article {
     padding: 5rem 2rem;
@@ -53,10 +49,10 @@ article {
 
 .nav {
     padding: .3rem;
-    margin: 0 20%;
     display: flex;
     justify-content: space-between;
     position: relative;
+    margin: 0 20%;
 }
 
 .sticky {
@@ -73,7 +69,7 @@ article {
 }
 
 .nav a:hover {
-    color: #CD201F;
+    color: #e7272d;
 }
 
 nav ul {
@@ -85,18 +81,20 @@ nav li {
     display: inline-block;
 }
 
-button {
-    background-color: #CD201F;
-    padding: .5rem 1rem;
-    border-radius: 1rem;
-    border: none;
+.main_button {
+    background-color: #e7272d;
+    padding: .7rem 1.5rem;
+    border-radius: 1.5rem;
+    border: 2px solid #e7272d;
     color: white;
     font-size: 1.2rem;
+    font-weight: bold;
 }
 
-button:hover {
+.main_button:hover {
     background-color: white;
-    color: #CD201F;
+    color: #e7272d;
+    border: 2px solid #e7272d;
 }
 
 .cart {
@@ -106,7 +104,7 @@ button:hover {
 /* HERO SECTION */
 
 .hero_section {
-    margin: 5rem 0;
+    margin: 5rem 20%;
     color: white;
 }
 
@@ -115,10 +113,9 @@ button:hover {
 }
 
 .hero_sub {
-    color: #CD201F;
+    color: #e7272d;
     font-weight: bold;
     font-size: 2rem;
-    margin: 0 1rem;
     
 }
 
@@ -147,8 +144,236 @@ button:hover {
 .hero_box {
     display: flex;
     justify-content: space-around;
-    background-color: #CD201F;
+    background-color: #e7272d;
     border-radius: 1rem;
     padding: 3rem 1rem;
     margin: -15rem 0 0 0;
+}
+
+
+/* WELCOME SECTION */
+
+#about_us {
+    background-color: #FFFFFF;   
+    color: black;
+}
+
+.about_us {
+    margin: 0 20%;
+    display: flex;
+    
+}
+
+.about_us h1 {
+    font-weight: 900;
+    font-size: 4.5rem;
+    line-height: 4rem;
+}
+
+
+.about_us_img {
+    width: 32rem;
+    display: grid;
+    margin: auto;
+}
+
+.about_us_info {
+    margin-top: 4rem;
+    text-align: right;
+}
+
+
+/* SPECIAL COMBO SECTION */
+
+#special_combo {
+    background-color: #fff4e2;
+}
+
+.special_combo {
+    margin: 0 20%;
+    text-align: center;
+}
+
+.combos {
+    display: flex;
+    margin-top: 4rem;
+}
+
+.combo_card {
+    border: 2px solid rgba(0, 0, 0, .15);
+    border-style: dotted;
+    border-radius: 2rem;
+    padding: 2.5rem 1rem 1rem;
+    margin: 0 .5rem;
+}
+
+.combo_card:hover {
+    background-color: #e7272d;
+    /* transform: scale(1.05); */
+    transform: translateY(-15px);
+    transition: transform .3s;
+    border: #e7272d;
+    color: white;
+}
+
+.combo_card img {
+    width: 12rem;
+    margin-top: 2rem;
+}
+
+.combo_heading {
+    font-size: 4rem;
+    font-weight: 900;
+}
+
+.combo_price {
+    font-weight: bold;
+    margin-top: 1rem;
+}
+
+.combo_button {
+    background-color: #fff4e2;
+    padding: .4rem 2rem;
+    border-radius: 1.5rem;
+    border: 2px solid rgba(231, 39, 45, .15);
+    border-style: dashed;
+    color: #e7272d;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: 2rem;
+}
+
+button:hover {
+    background-color: #fbbe36;
+    color: black;
+    border: 2px solid #fbbe36;
+}
+
+
+
+/* MENU SECTION */
+
+#menu {
+    background-color: #ffffff;
+}
+
+.menu {
+    margin: 0 20%;
+    text-align: center;
+}
+
+.accordion {
+  background-color: #e7272d;
+  color: white;
+  cursor: pointer;
+  padding: 1.5rem;
+  width: 100%;
+  text-align: center;
+  border: none;
+  outline: none;
+  font-size: 1.3rem;
+  font-weight: bold;
+  transition: 0.4s;
+}
+
+.active, .accordion:hover {
+  background-color: #fbbe36;
+}
+
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  display: none;
+  overflow: hidden;
+}
+
+.menu_sample {
+    display: flex;
+    justify-content: space-around;
+    padding: 1rem;
+}
+
+.menu_row {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+
+
+
+
+@media only screen and (max-width: 600px) {
+    
+
+  .about_us {
+    display: block;
+    margin: 0 0;
+  }
+
+  .about_us_img {
+    width: 20rem;
+  }
+
+  .about_us_info {
+    text-align: center;
+  }
+
+  .about_us h1 {
+    font-size: 2rem;
+    line-height: 2rem;
+  }
+
+  .hero_section {
+    margin: 0 0;
+    display: block;
+  }
+
+  .hero_section_main {
+    display: block;
+    text-align: center;
+  }
+
+  .hero_sub {
+    font-size: 1rem;
+  }
+
+  .hero_heading {
+    font-size: 3rem;
+    line-height: 2rem;
+  }
+
+  .hero_img {
+    width: 100%;
+  }
+
+  .hero_box {
+    margin: 0;
+  }
+
+  .nav {
+    margin: 0;
+  }
+
+  .order {
+    display: none;
+  }
+
+  .combos {
+    display: block;
+  }
+
+  .special_combo {
+    margin: 0;
+  }
+
+  .combo_heading {
+    font-size: 2.5rem;
+  }
+
+  .combo_card {
+    margin-top: 1rem;
+  }
+
 }
