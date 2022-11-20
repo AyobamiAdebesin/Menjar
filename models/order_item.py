@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """ Defines an order item """
-from base_model import BaseModel
+from models.base_model import BaseModel
 
 
 class OrderItem(BaseModel):

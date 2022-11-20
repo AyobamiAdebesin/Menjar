@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """ Defines a Meal Item class """
-from base_model import BaseModel
+from models.base_model import BaseModel
 
 
 class MealItem(BaseModel):

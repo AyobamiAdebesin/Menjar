@@ -22,7 +22,7 @@ class FileStorage:
         """
         Serializes all objects in __objects to the JSON  file; __file_path
         """
-        json_object {}
+        json_object = {}
         for key, obj in FileStorage.__objects.items():
             json_object[key] = obj.to_dict()
 
@@ -47,10 +47,10 @@ class FileStorage:
         try:
             with open(FileStorage.__file_path, "r", encoding="utf-8") as f:
                 json_object = json.load(f)
-            for key, value in json_object.items():
+            for key, value, in json_object.items():
                 class_name = value['__class__']
                 if class_name in class_dict:
                     model_name = class_dict.get(class_name)
                     self.new(model_name(**value))
         except FileNotFoundError:
-            raise "File Not found! Please provide a file path."
+            pass

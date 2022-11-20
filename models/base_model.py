@@ -3,11 +3,10 @@
 for all objects in this program
 """
 import uuid
-import datetime
+from datetime import datetime
+from models import storage
 import os
 import sys
-import sqlaclchemy
-from sqlalchemy.ext import declarative_base
 
 
 class BaseModel:
@@ -19,9 +18,9 @@ class BaseModel:
                 if k == "__class__":
                     pass
                 elif k == "created_at":
-                    self.created_at = datetiime.fromisoformat(value)
+                    self.created_at = datetime.fromisoformat(v)
                 elif k == "updated_at":
-                    self.updated_at = datetime.fromisoformat(value)
+                    self.updated_at = datetime.fromisoformat(v)
                 else:
                     setattr(self, k, v)
         else:
@@ -49,4 +48,5 @@ class BaseModel:
         new_dict = self.__dict__.copy()
         new_dict['__class__'] = self.__class__.__name__
         new_dict['created_at'] = new_dict['created_at'].isoformat()
-        new_dict['updated_at'] = new_dict['updated_at'].isformat()
+        new_dict['updated_at'] = new_dict['updated_at'].isoformat()
+        return (new_dict)
