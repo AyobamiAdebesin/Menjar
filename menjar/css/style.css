@@ -38,7 +38,7 @@ header {
 }
 
 header div > img {
-  width: 64px;
+  width: 4rem;
 }
 
 article {
@@ -585,6 +585,10 @@ form {
   padding-right: 0.5rem;
 }
 
+.footer_section_main {
+  padding-right: 1rem;
+}
+
 .footer a {
   text-decoration: none;
   font-size: 1.5rem;
@@ -593,6 +597,10 @@ form {
 
 .footer a:hover {
   color: #e7272d;
+}
+
+footer div > img {
+  width: 4rem;
 }
 
 .copyright {
@@ -786,5 +794,14 @@ form {
 
   .form_item {
     padding-bottom: 1.5rem;
+  }
+
+  .footer_section_main {
+    padding-top: 1.5rem;
+    text-align: center;
+  }
+
+  .footer_box {
+    display: block;
   }
 }
