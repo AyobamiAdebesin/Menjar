@@ -154,10 +154,15 @@ nav li {
 
 .hero_box_item {
   display: flex;
+  justify-content: space-around;
+}
+
+.hero_box_item span {
+  padding-right: 0.3rem;
 }
 
 .hero_box_item h4 {
-  padding: 0 1rem;
+  padding: 0 2rem;
 }
 
 .hero_box {
@@ -332,7 +337,6 @@ nav li {
   font-weight: bolder;
   width: 100%;
   height: 64px;
-  font-size: 16px;
 }
 
 .accordion-select {
@@ -511,6 +515,24 @@ form {
   font-size: 1.4rem;
 }
 
+.social {
+  display: flex;
+}
+
+.social i {
+  padding-right: 1rem;
+}
+
+.social a {
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: white;
+}
+
+.social a:hover {
+  color: #fbbe36;
+}
+
 .contact_main {
   padding-top: 4rem;
 }
@@ -519,6 +541,9 @@ form {
   background-color: #e7272d;
   border-radius: 1rem;
   padding: 3rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .contact_info {
@@ -527,6 +552,10 @@ form {
 
 .contact_details {
   padding-top: 1.5rem;
+}
+
+.contact_details span {
+  padding-right: 1rem;
 }
 
 .contact_help {
