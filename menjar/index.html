@@ -31,37 +31,42 @@
 
 <body>
     <div class="bg nav">
-        <header>
-            <div><img src="images/dinner.png" alt="Menjar Logo" /></div>
-        </header>
-        <nav id="navbar" class="navbar navbar-expand-lg">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item"><a class="nav-link" href="#menu">Menu</a></li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#about_us">About Us</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#gallery">Gallery</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contact</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
+        <div class="header_nav">
+            <header class="">
+                <div><img src="images/dinner.png" alt="Menjar Logo" /></div>
+            </header>
+            <nav id="navbar" class="navbar navbar-expand-lg">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="#menu">Menu</a></li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about_us">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#gallery">Gallery</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
 
 
         <div class="order">
-            <button class="main_button" type="button">ONLINE ORDER</button>
+            <a href="signup.html"><button class="main_button_inverse" type="button" name="button">Sign Up</button></a>
+
+            <button class="main_button" type="button" name="button">Login</button>
+            <!-- <button class="main_button" type="button">ONLINE ORDER</button> -->
             <a href="#menu">
-                <i class="fa fa-cart-plus" aria-hidden="true"></i>
+                <i class="fa fa-cart-plus cart" aria-hidden="true"></i>
             </a>
         </div>
     </div>
@@ -82,9 +87,9 @@
 
                 <div class="hero_box row">
                     <div class="hero_box_item col-lg-8 col-sm-12">
-                        <h4><span><i class="fa fa-bullseye" aria-hidden="true"></i></span> Snails</h4>
-                        <h4><span><i class="fa fa-bullseye" aria-hidden="true"></i></span> Shrimps</h4>
-                        <h4><span><i class="fa fa-bullseye" aria-hidden="true"></i></span> Dried Fish</h4>
+                        <p><span><i class="fa fa-bullseye" aria-hidden="true"></i></span> Snails</p>
+                        <p><span><i class="fa fa-bullseye" aria-hidden="true"></i></span> Shrimps</p>
+                        <p><span><i class="fa fa-bullseye" aria-hidden="true"></i></span> Dried Fish</p>
                     </div>
                     <div class=" col-lg-4 col-sm-12">
                         <h3><span>ONLY</span> $4,500</h3>
@@ -92,13 +97,13 @@
                 </div>
             </article>
         </section>
-        <section id="about_us" class="text-dark">
+        <section id="about_us" class="text-dark bg-white">
             <article class="row about_us bg">
                 <div class="col">
                     <img class="about_us_img" src="images/Nigerian-Food-Agege-Bread-1536x1025.png" alt="" />
                 </div>
                 <div class="about_us_info col">
-                    <h1>We make the best Healthy Local dish in Lasgidi</h1>
+                    <h1 class="about_us_main">We make the best Healthy Local dish in Lasgidi</h1>
                     <p>
                         Nigerian cuisine is a fusion of spices and flavours. The list of
                         foods in Nigeria is endless, and the culinary style in the country
@@ -109,7 +114,7 @@
                 </div>
             </article>
         </section>
-        <section id="special_combo">
+        <section id="special_combo" class="s_combo">
             <article class="bg special_combo text-center">
                 <div>
                     <h2 class="combo_heading">Special Combo</h2>
@@ -167,7 +172,7 @@
                 </div>
             </article>
         </section>
-        <section id="menu">
+        <section id="menu" class="bg-white">
             <article class="bg menu text-center">
                 <div>
                     <h3 class="combo_sub">Menu</h3>
@@ -784,7 +789,7 @@
                         </div>
                     </div>
                     <div class="col-lg-8 contact_info">
-                        <form class="" action="">
+                        <form class="contact_form" action="">
                             <div class="contact_name row">
                                 <div class="contact_mail col-lg-6 col-sm-12">
                                     <div class="col">
@@ -837,8 +842,10 @@
                                     <textarea name="message" id="message" cols="80" rows="1" placeholder="Write your message"></textarea>
                                 </div>
                             </div>
+                            <div class="form_button">
+                                <button class="main_button" type="submit">Submit</button>
+                            </div>
 
-                            <button class="main_button" type="submit">Submit</button>
                         </form>
                     </div>
                 </div>
@@ -847,11 +854,11 @@
                     <div class="reservation_form">
                         <form action="" class="text-white">
                             <div class="form_item">
-                                <label class="" for="date">Phone</label> <br />
+                                <label class="" for="date">Date</label> <br />
                                 <input class="" type="date" id="date" required minlength="2" name="date" placeholder="Date" />
                             </div>
                             <div class="form_item">
-                                <label class="" for="time">Phone</label> <br />
+                                <label class="" for="time">Time</label> <br />
                                 <input class="" type="time" id="time" required minlength="2" name="time" placeholder="Time" />
                             </div>
                             <div class="form_item">
