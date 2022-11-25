@@ -166,7 +166,6 @@ nav li {
 }
 
 /* WELCOME SECTION */
-
 .about_us_main {
     font-weight: 700;
     font-size: 5rem;
@@ -248,7 +247,6 @@ nav li {
 }
 
 /* MENU SECTION */
-
 .accordion {
     box-sizing: border-box;
     display: flex;
@@ -591,6 +589,10 @@ form {
     width: 100%;
 }
 
+.sign_section {
+    margin-top: 4rem;
+}
+
 /* FOOTER SECTION */
 .footer_section {
     display: block;
@@ -620,22 +622,6 @@ footer div>img {
 
 .copyright {
     padding-top: 3rem;
-}
-
-/* SIUG UP SECTION */
-
-.sign_up {
-    border-radius: 1rem;
-    margin-top: 10rem;
-}
-
-.sign_up_image {
-    width: 100%;
-    object-fit: cover;
-}
-
-.sign_up_main {
-    padding: 5rem 2rem;
 }
 
 @media only screen and (max-width: 600px) {

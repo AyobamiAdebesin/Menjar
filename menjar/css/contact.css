@@ -1,0 +1,213 @@
+body {
+    font-family: "Markazi Text", serif;
+    margin: 2rem 0 0;
+    background-color: #fbbe36;
+}
+
+header {
+    background-color: #e7272d;
+    padding: 0.5rem 1rem;
+    border-radius: 0 0 16px 16px;
+    margin-top: -40px;
+}
+
+header div>img {
+    width: 4rem;
+}
+
+article {
+    padding: 80px 32px;
+}
+
+.bg {
+    margin: 0 15%;
+}
+
+/* NAVIGATION SECTION */
+.header_nav {
+    display: flex;
+}
+
+.nav {
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #ffffff;
+}
+
+nav {
+    margin: 0 5rem;
+}
+
+.nav a {
+    text-decoration: none;
+    font-size: 1.3rem;
+    color: white;
+    margin: 0 .3rem;
+}
+
+.nav a:hover {
+    color: #e7272d;
+}
+
+nav ul {
+    list-style: none;
+    text-align: center;
+}
+
+nav li {
+    display: inline-block;
+}
+
+.main_button {
+    background-color: #e7272d;
+    padding: 0.7rem 1.5rem;
+    border-radius: 1.5rem;
+    border: 2px solid #e7272d;
+    color: white;
+    font-size: .9rem;
+    font-weight: bold;
+}
+
+.main_button:hover {
+    background-color: white;
+    color: #e7272d;
+    border: 2px solid #e7272d;
+}
+
+.main_button_inverse {
+    background-color: #ffffff;
+    padding: 0.7rem 1.5rem;
+    border-radius: 1.5rem;
+    border: 2px solid #e7272d;
+    color: #e7272d;
+    font-size: .9rem;
+    font-weight: bold;
+}
+
+.main_button_inverse:hover {
+    background-color: #e7272d;
+    color: #ffffff;
+    border: 2px solid #e7272d;
+}
+
+.cart {
+    width: 21px;
+    margin-left: 1rem;
+}
+
+/* SIUG UP SECTION */
+.sign_up {
+    border-radius: 1rem;
+    background-color: #fff4e2;
+}
+
+.sign_up_img {
+
+}
+
+.sign_up_image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0 1rem 1rem 0;
+}
+
+.sign_up_main {
+    padding: 5rem 2rem;
+}
+
+.sign_section {
+    margin-top: 5rem;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.already {
+    margin-top: 2rem;
+}
+
+.form_container {
+    padding: 1.5rem 4rem;
+}
+
+.form_container .form_item {
+    margin-bottom: 1.5rem;
+}
+
+.form_container .form_wrap.form_grp {
+    display: flex;
+}
+
+.form_container .form_wrap.form_grp .form_item {
+    width: 50%;
+}
+
+.form_container .form_wrap.form_grp .form_item:first-child {
+    margin-right: 4%;
+}
+
+.form_container .form_item label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form_container .form_item input,
+.form_container .form_item select {
+    width: 100%;
+    padding: .6rem;
+    font-size: 1rem;
+    border: 1px solid #e7272d;
+    border-radius: 3px;
+}
+
+.form_container .btn input[type="submit"] {
+    background: #e7272d;
+    border: 1px solid rgba(231, 39, 45, 0.5);
+    padding: .5rem 2rem;
+    width: 100%;
+    border-radius: 2rem;
+    cursor: pointer;
+    color: #fff;
+    font-size: 1.4rem;
+}
+
+/* FOOTER SECTION */
+.footer_section {
+    display: block;
+}
+
+.footer_section i {
+    padding-right: 0.5rem;
+}
+
+.footer_section_main {
+    padding-right: 1rem;
+}
+
+.footer a {
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: white;
+}
+
+.footer a:hover {
+    color: #e7272d;
+}
+
+footer div>img {
+    width: 4rem;
+}
+
+.copyright {
+    padding-top: 3rem;
+}

@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css">
 
     <!-- Link to the CSS file -->
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/contact.css" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -37,15 +37,15 @@
                         <li class="nav-item">
                             <a class="nav-link" href="index.html">Home</a>
                         </li>
-                        <li class="nav-item"><a class="nav-link" href="#menu">Menu</a></li>
+                        <li class="nav-item"><a class="nav-link" href="index.html#menu">Menu</a></li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#about_us">About Us</a>
+                            <a class="nav-link" href="index.html#about_us">About Us</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#gallery">Gallery</a>
+                            <a class="nav-link" href="index.html#gallery">Gallery</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#contact">Contact</a>
+                            <a class="nav-link" href="index.html#contact">Contact</a>
                         </li>
                     </ul>
                 </div>
@@ -54,7 +54,7 @@
 
 
         <div class="order">
-            <button class="main_button_inverse" type="button" name="button">Sign Up</button>
+            <button class="main_button_inverse" type="button" name="button" data-toggle="modal" data-target="#loginModal">Sign Up</button>
             <button class="main_button" type="button" name="button">Login</button>
             <!-- <button class="main_button" type="button">ONLINE ORDER</button> -->
             <a href="#menu">
@@ -62,17 +62,122 @@
             </a>
         </div>
     </div>
-    <div class="sign_up row bg-white bg">
-        <div class="sign_up_main col text-center">
-            <h1>Welcom Back</h1>
+    <article class="bg-white sign_section">
+        <div class="sign_up row bg">
+            <div class="sign_up_main col">
+
+                <div class="form_container">
+                    <h1>Welcom Back</h1>
+                    <form name="form">
+                        <div class="form_wrap form_grp">
+                            <div class="form_item">
+                                <label>First Name</label>
+                                <input type="text">
+
+                            </div>
+                            <div class="form_item">
+                                <label>Last Name</label>
+                                <input type="text">
+
+                            </div>
+                        </div>
+                        <div class="form_wrap">
+                            <div class="form_item">
+                                <label>Email Address</label>
+                                <input type="text">
+
+                            </div>
+                        </div>
+                        <div class="form_wrap form_grp">
+                            <div class="form_item">
+                                <label>Password</label>
+                                <input type="password">
+
+                            </div>
+                            <div class="form_item">
+                                <label>Confirm Password</label>
+                                <input type="password">
+
+                            </div>
+                        </div>
+                        <div class="form_wrap">
+                            <div class="form_item">
+                                <label>Gender</label>
+                                <select name="country">
+                                    <option>Male</option>
+                                    <option>Famale</option>
+                                    <option>others</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form_wrap">
+                            <div class="form_item">
+                                <label>Phone</label>
+                                <input type="text">
+                                <div class="error" id="phone"></div>
+                            </div>
+                        </div>
+                        <div class="btn">
+                            <input type="submit" value="Get Started">
+                        </div>
+                    </form>
+                    <div class="text-center already">
+                        <p>Already a memeber, <a href="#">signin</a> here </p>
+                    </div>
+                </div>
+            </div>
+            <div class="sign_up_img col">
+                <img class="sign_up_image" src="images/eating.jpg" alt="eating.jpg">
+            </div>
 
         </div>
-        <div class="col">
-            <img class="sign_up_image" src="images/eating.jpg" alt="eating.jpg">
+    </article>
 
-        </div>
 
-    </div>
+    <footer>
+        <div id="footer">
+            <article class="bg footer text-white">
+                <div class="row footer_box">
+                    <div class="col footer_section_main">
+                        <div><img src="images/dinner.png" alt="Menjar Logo" /></div>
+                        <h3>Menjar</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.imos libero distinctio.</p>
+                    </div>
+                    <div class="col footer_section_main">
+                        <h3>Navigation</h3>
+                        <div class="footer_section">
+                            <div><a href="#home">Home</a></div>
+                            <div><a href="#menu">Menu</a></div>
+                            <div><a href="#about">About Us</a></div>
+                            <div><a href="#gallery">Gallery</a></div>
+                            <div><a href="#contact">Contact</a></div>
+                        </div>
+
+                    </div>
+                    <div class="col footer_section_main">
+                        <h3>Follow Us</h3>
+                        <div class="footer_section">
+                            <div><a href="">
+                                    <i class="fa fa-instagram" aria-hidden="true"></i> @menja_food
+                                </a></div>
+
+                            <div><a href="">
+                                    <i class="fa fa-twitter" aria-hidden="true"></i> @menja_food
+                                </a></div>
+                            <div> <a href="">
+                                    <i class="fa fa-youtube-play" aria-hidden="true"></i> @menja_food
+                                </a></div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class=" copyright row text-center">
+                    <p>Copyright Menjar @2022</p>
+                </div>
+            </article>
+
+    </footer>
 
 </body>
 
