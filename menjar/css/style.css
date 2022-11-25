@@ -145,7 +145,8 @@ nav li {
 
 .hero_box_item {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .hero_box_item span {
@@ -153,7 +154,7 @@ nav li {
 }
 
 .hero_box_item p {
-    padding: 0 2rem;
+    padding: 0 2rem 0 0;
 }
 
 .hero_box {
@@ -163,6 +164,19 @@ nav li {
     border-radius: 16px;
     padding: 48px 16px;
     /* margin: -160px 0 0 0; */
+}
+
+.hero_price {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: inherit;
+}
+
+.hero_price h5 {
+    border-radius: .5rem;
+    font-size: .8rem;
+    color: #e7272d;
 }
 
 /* WELCOME SECTION */

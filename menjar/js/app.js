@@ -1,3 +1,4 @@
+AOS.init();
 var acc = document.getElementsByClassName("accordion");
 var i;
 
@@ -17,6 +18,9 @@ for (i = 0; i < acc.length; i++) {
     });
 }
 
+$('#exampleModalCenter').on('shown.bs.modal', function() {
+    $('#myInput').trigger('focus')
+})
 
 
 // // When the user scrolls the page, execute myFunction
