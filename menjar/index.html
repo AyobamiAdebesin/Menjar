@@ -11,18 +11,20 @@
     <meta property="og:title" content="Menjar" />
     <meta property="og:type" content="website" />
     <meta property="og:image" content="/images/logo.png" />
-    <meta property="og:description" content="Menjar is a African centered resturant, that serves the best Nigerian dishes" />
+    <meta property="og:description"
+        content="Menjar is a African centered resturant, that serves the best Nigerian dishes" />
     <meta property="og:locale" content="en_US" />
     <meta property="og:site_name" content="Menjar" />
 
     <!-- LINK TO BOOTSRAP STYLE -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous" />
 
     <!-- LINK TO FONT AWESOME STYLESHEET -->
     <link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css">
 
     <!-- Link to the CSS file -->
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="templates/css/style.css" />
 
     <!-- LINK TO AOS LIBRY script -->
     <link rel="stylesheet" href="../node_modules/aos/dist/aos.css">
@@ -31,7 +33,8 @@
     <!-- LINK TO GOOGLE FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Markazi+Text:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Markazi+Text:wght@400;500;600;700&display=swap"
+        rel="stylesheet" />
 </head>
 
 <body>
@@ -41,7 +44,8 @@
                 <div><img src="images/dinner.png" alt="Menjar Logo" /></div>
             </header>
             <nav id="navbar" class="navbar navbar-expand-lg">
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
@@ -66,13 +70,16 @@
 
 
         <div class="order">
-            <button class="main_button_inverse" type="button" name="button" data-toggle="modal" data-target="#sign_up_box">Sign Up</button>
+            <button class="main_button_inverse" type="button" name="button" data-toggle="modal"
+                data-target="#sign_up_box">Sign Up</button>
 
-            <button class="main_button" type="button" name="button" data-toggle="modal" data-target="#log_in_box">Login</button>
+            <button class="main_button" type="button" name="button" data-toggle="modal"
+                data-target="#log_in_box">Login</button>
             <!-- <button class="main_button" type="button">ONLINE ORDER</button> -->
 
             <!-- Sign UP Modal -->
-            <div class="modal fade" id="sign_up_box" tabindex="-1" role="dialog" aria-labelledby="sign_up_boxTitle" aria-hidden="true">
+            <div class="modal fade" id="sign_up_box" tabindex="-1" role="dialog" aria-labelledby="sign_up_boxTitle"
+                aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered" role="document">
                     <div class="modal-content">
                         <div class="modal-body p-5">
@@ -83,28 +90,45 @@
                             </div>
                             <form class="" action="index.html" method="post">
                                 <div class="form-floating mb-3">
-                                    <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-                                    <label for="floatingInput">Email address</label>
+                                    <input type="text" name="firstName" class="form-control" id="floatingInput"
+                                        placeholder="First Name">
+                                    <label for="floatingInput">First Name</label>
                                 </div>
-                                <div class="form-floating mb-3">
-                                    <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
-                                    <label for="floatingPassword">Password</label>
-                                </div>
-                                <div class="form-floating mb-5">
-                                    <input type="password" class="form-control" id="floatingPassword" placeholder="Confirm Password">
-                                    <label for="floatingPassword">Confirm Password</label>
-                                </div>
+                                <form class="" action="index.html" method="post">
+                                    <div class="form-floating mb-3">
+                                        <input type="text" name="lastName" class="form-control" id="floatingInput"
+                                            placeholder="Last name">
+                                        <label for="floatingInput">Last Name</label>
+                                    </div>
+                                    <form class="" action="index.html" method="post">
+                                        <div class="form-floating mb-3">
+                                            <input type="text" name="email" class="form-control" id="floatingInput"
+                                                placeholder="name@example.com">
+                                            <label for="floatingInput">Email address</label>
+                                        </div>
+                                        <div class="form-floating mb-3">
+                                            <input type="text" name="password" class="form-control"
+                                                id="floatingPassword" placeholder="Password">
+                                            <label for="floatingPassword">Password</label>
+                                        </div>
+                                        <div class="form-floating mb-5">
+                                            <input type="text" name="cpassword" class="form-control"
+                                                id="floatingPassword" placeholder="Confirm Password">
+                                            <label for="floatingPassword">Confirm Password</label>
+                                        </div>
 
-                                <div class="text-center">
-                                    <button class="btn btn-danger btn-lg" type="submit" name="button">Sign Up</button>
+                                        <div class="text-center">
+                                            <button class="btn btn-danger btn-lg" type="submit" name="button">Sign
+                                                Up</button>
 
-                                </div>
-                            </form>
+                                        </div>
+                                    </form>
 
                         </div>
                         <div class="modal-footer justify-content-center">
                             <div class="pt-2">
-                                <p>Already have an account? <a class="text-danger " data-toggle="modal" data-target="#log_in_box" href="#log_in_box">Log In</a> </p>
+                                <p>Already have an account? <a class="text-danger " data-toggle="modal"
+                                        data-target="#log_in_box" href="#log_in_box">Log In</a> </p>
                             </div>
                         </div>
                     </div>
@@ -112,7 +136,8 @@
             </div>
 
             <!-- Log In Modal -->
-            <div class="modal fade" id="log_in_box" tabindex="-1" role="dialog" aria-labelledby="log_in_boxTitle" aria-hidden="true">
+            <div class="modal fade" id="log_in_box" tabindex="-1" role="dialog" aria-labelledby="log_in_boxTitle"
+                aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered" role="document">
                     <div class="modal-content">
                         <div class="modal-body p-5">
@@ -123,11 +148,13 @@
                             </div>
                             <form class="" action="index.html" method="post">
                                 <div class="form-floating mb-3">
-                                    <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                                    <input type="email" class="form-control" id="floatingInput"
+                                        placeholder="name@example.com">
                                     <label for="floatingInput">Email address</label>
                                 </div>
                                 <div class="form-floating mb-5">
-                                    <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                                    <input type="password" class="form-control" id="floatingPassword"
+                                        placeholder="Password">
                                     <label for="floatingPassword">Password</label>
                                 </div>
 
@@ -140,7 +167,8 @@
                         </div>
                         <div class="modal-footer justify-content-center">
                             <div class="pt-2">
-                                <p>You don't have an account? <a class="text-danger" href="#sign_up_box" data-toggle="modal" data-target="#sign_up_box">Sign Up</a> </p>
+                                <p>You don't have an account? <a class="text-danger" href="#sign_up_box"
+                                        data-toggle="modal" data-target="#sign_up_box">Sign Up</a> </p>
                             </div>
                         </div>
                     </div>
@@ -162,7 +190,8 @@
                         </h1>
                     </div>
                     <div class="col-lg-5 col-sm-12">
-                        <img class="hero_img" src="images/pounded_yam-removebg-preview.png" alt="hero image" />
+                        <img class="hero_img" src={{url_for('static', filename="images/pounded_yam-removebg-preview.png"
+                            )}} />
                     </div>
                 </div>
 
@@ -726,7 +755,8 @@
                 </div>
                 <div class="deilvery_img col-lg-4 col-md-12 col-sm-12">
                     <div>
-                        <img src="images/Pizza-delivery-illustration-transparent-PNG.png" alt="" class="delivery_img_main" />
+                        <img src="images/Pizza-delivery-illustration-transparent-PNG.png" alt=""
+                            class="delivery_img_main" />
                     </div>
                 </div>
 
@@ -748,9 +778,12 @@
             <article class="bg testimonial">
                 <div id="carouselExampleIndicators" class="carousel carousel-dark slide" data-bs-ride="carousel">
                     <div class="carousel-indicators">
-                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                            class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                            aria-label="Slide 3"></button>
                     </div>
                     <div class="carousel-inner">
                         <div class="carousel-item active">
@@ -774,7 +807,8 @@
                         <div class="carousel-item">
                             <div class="testimonial_main row">
                                 <div class="t_img col-lg-4">
-                                    <img class="testimonial_img" src="images/elizeu-dias-2EGNqazbAMk-unsplash.jpg" alt="" />
+                                    <img class="testimonial_img" src="images/elizeu-dias-2EGNqazbAMk-unsplash.jpg"
+                                        alt="" />
                                 </div>
                                 <div class="testimonial_info col-lg-4">
                                     <img src="images/quote.png" alt="" />
@@ -792,7 +826,8 @@
                         <div class="carousel-item">
                             <div class="testimonial_main row">
                                 <div class="t_img col-lg-4">
-                                    <img class="testimonial_img" src="images/joey-nicotra-DNikBY1J--g-unsplash.jpg" alt="" />
+                                    <img class="testimonial_img" src="images/joey-nicotra-DNikBY1J--g-unsplash.jpg"
+                                        alt="" />
                                 </div>
                                 <div class="testimonial_info col-lg-4">
                                     <img src="images/quote.png" alt="" />
@@ -808,11 +843,13 @@
                             </div>
                         </div>
                     </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                        data-bs-slide="prev">
                         <span class="carousel-control-prev-icon indicator" aria-hidden="true"></span>
                         <span class="visually-hidden">Previous</span>
                     </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                        data-bs-slide="next">
                         <span class="carousel-control-next-icon indicator" aria-hidden="true"></span>
                         <span class="visually-hidden">Next</span>
                     </button>
@@ -857,7 +894,8 @@
                         <div class="contact_details">
                             <p><span><i class="fa fa-phone" aria-hidden="true"></i></span> 09035915128</p>
                             <p><span><i class="fa fa-envelope" aria-hidden="true"></i></span> menjar@gmail.com</p>
-                            <p><span><i class="fa fa-map-marker" aria-hidden="true"></i></span> 64 maryland road ikeja, Lagos</p>
+                            <p><span><i class="fa fa-map-marker" aria-hidden="true"></i></span> 64 maryland road ikeja,
+                                Lagos</p>
                         </div>
                         <div class="social_media">
                             <div class="social">
@@ -881,22 +919,26 @@
                                     <div class="col">
                                         <label class="" for="first_name">First Name</label>
                                         <br />
-                                        <input class="col" type="text" id="first_name" name="first_name" required minlength="2" placeholder="Your first name" />
+                                        <input class="col" type="text" id="first_name" name="first_name" required
+                                            minlength="2" placeholder="Your first name" />
                                     </div>
                                     <div class="">
                                         <label class="" for="last_name">Last Name</label> <br />
-                                        <input class="" type="text" id="last_name" required minlength="2" name="last name" placeholder="Your last name" />
+                                        <input class="" type="text" id="last_name" required minlength="2"
+                                            name="last name" placeholder="Your last name" />
                                     </div>
                                 </div>
                                 <div class="contact_mail col">
                                     <div class="">
                                         <label class="" for="email">E-mail</label> <br />
-                                        <input class="col" type="email" id="email" name="e-mail" required minlength="2" placeholder="example@gmail.com
+                                        <input class="col" type="email" id="email" name="e-mail" required minlength="2"
+                                            placeholder="example@gmail.com
                       required" />
                                     </div>
                                     <div class="">
                                         <label class="" for="phone">Phone</label> <br />
-                                        <input class="" type="number" id="phone" required minlength="2" name="phone" placeholder="Phone No" />
+                                        <input class="" type="number" id="phone" required minlength="2" name="phone"
+                                            placeholder="Phone No" />
                                     </div>
                                 </div>
                             </div>
@@ -905,19 +947,23 @@
                                 <h4>What do you need help with?</h4>
                                 <div class="contact_des">
                                     <div>
-                                        <input type="radio" id="online_order" name="online order" value="Online Order" />
+                                        <input type="radio" id="online_order" name="online order"
+                                            value="Online Order" />
                                         <label for="online_order">Online Order</label>
                                     </div>
                                     <div>
-                                        <input type="radio" id="online_order" name="online order" value="Online Order" />
+                                        <input type="radio" id="online_order" name="online order"
+                                            value="Online Order" />
                                         <label for="online_order">Reservations</label>
                                     </div>
                                     <div>
-                                        <input type="radio" id="online_order" name="online order" value="Online Order" />
+                                        <input type="radio" id="online_order" name="online order"
+                                            value="Online Order" />
                                         <label for="online_order">Payment Issue</label>
                                     </div>
                                     <div>
-                                        <input type="radio" id="online_order" name="online order" value="Online Order" />
+                                        <input type="radio" id="online_order" name="online order"
+                                            value="Online Order" />
                                         <label for="online_order">Enquires/Others</label>
                                     </div>
                                 </div>
@@ -925,7 +971,8 @@
                             <div>
                                 <div class="col">
                                     <label class="" for="message">Message</label> <br />
-                                    <textarea name="message" id="message" cols="80" rows="1" placeholder="Write your message"></textarea>
+                                    <textarea name="message" id="message" cols="80" rows="1"
+                                        placeholder="Write your message"></textarea>
                                 </div>
                             </div>
                             <div class="form_button">
@@ -941,15 +988,18 @@
                         <form action="" class="text-white">
                             <div class="form_item">
                                 <label class="" for="date">Date</label> <br />
-                                <input class="" type="date" id="date" required minlength="2" name="date" placeholder="Date" />
+                                <input class="" type="date" id="date" required minlength="2" name="date"
+                                    placeholder="Date" />
                             </div>
                             <div class="form_item">
                                 <label class="" for="time">Time</label> <br />
-                                <input class="" type="time" id="time" required minlength="2" name="time" placeholder="Time" />
+                                <input class="" type="time" id="time" required minlength="2" name="time"
+                                    placeholder="Time" />
                             </div>
                             <div class="form_item">
                                 <label class="" for="email">Email</label> <br />
-                                <input class="" type="email" id="email" required minlength="2" name="email" placeholder="example@email.com" />
+                                <input class="" type="email" id="email" required minlength="2" name="email"
+                                    placeholder="example@email.com" />
                             </div>
                             <div>
                                 <button class="main_button_inverse" type="submit">
@@ -1009,11 +1059,19 @@
 
     <script src="js/app.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
     <!-- JavaScript Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>

@@ -1,0 +1,1094 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" , maximum-scale="1" />
+
+    <title>Menjar</title>
+
+    <meta property="og:title" content="Menjar" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="/images/logo.png" />
+    <meta property="og:description"
+        content="Menjar is a African centered resturant, that serves the best Nigerian dishes" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:site_name" content="Menjar" />
+
+    <!-- LINK TO BOOTSRAP STYLE -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous" />
+
+    <!-- LINK TO FONT AWESOME STYLESHEET -->
+    <link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css">
+    <script type="text/javascript" src="{{ url_for('static', filename = 'js/app.js') }}">
+    </script>
+
+    <!-- Link to the CSS file -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href={{url_for('static', filename='css/style.css')}} />
+    <link rel="stylesheet" href={{url_for('static', filename='css/font-awesome/css/font-awesome.min.css')}} />
+
+    <!-- LINK TO AOS LIBRY script -->
+    <link rel="stylesheet" href="../node_modules/aos/dist/aos.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- LINK TO GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Markazi+Text:wght@400;500;600;700&display=swap"
+        rel="stylesheet" />
+</head>
+
+<body>
+    <div class="bg nav">
+        <div class="header_nav">
+            <header class="">
+                <div><img src= {{url_for('static', filename ="/images/Menjar-logo.png")}} alt="Menjar Logo" /></div>
+            </header>
+            <nav id="navbar" class="navbar navbar-expand-lg">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="#menu">Menu</a></li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about_us">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#gallery">Gallery</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        {% if not loggedIn %}
+   
+            <div class="order">
+                <button class="main_button_inverse" type="button" name="button" data-toggle="modal"
+                    data-target="#sign_up_box">Sign Up</button>
+    
+                <button class="main_button" type="button" name="button" data-toggle="modal"
+                    data-target="#log_in_box">Login</button>
+                <!-- <button class="main_button" type="button">ONLINE ORDER</button> -->
+    
+                <!-- Sign UP Modal -->
+                <div class="modal fade" id="sign_up_box" tabindex="-1" role="dialog" aria-labelledby="sign_up_boxTitle"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-body p-5">
+    
+                                <div class="text-center mb-4">
+                                    <h2>Sign Up</h2>
+    
+                                </div>
+                                <form class="" action="/register" method="POST" onsubmit="return validate()">
+                                    <div class="form-floating mb-3">
+                                        <input type="text" name="firstName" class="form-control" id="floatingInput"
+                                            placeholder="First Name">
+                                        <label for="floatingInput">First Name</label>
+                                    </div>
+                                        <div class="form-floating mb-3">
+                                            <input type="text" name="lastName" class="form-control" id="floatingInput"
+                                                placeholder="Last name">
+                                            <label for="floatingInput">Last Name</label>
+                                        </div>
+                                            <div class="form-floating mb-3">
+                                                <input type="text" name="state" class="form-control" id="floatingInput"
+                                                    placeholder="State">
+                                                <label for="floatingInput">State</label>
+                                            </div>
+                                            <div class="form-floating mb-3">
+                                                <input type="email" name="email" class="form-control" id="floatingInput"
+                                                    placeholder="name@example.com">
+                                                <label for="floatingInput">Email address</label>
+                                            </div>
+                                            <div class="form-floating mb-3">
+                                                <input type="text" name="phone" class="form-control" id="floatingInput"
+                                                    placeholder="Phone Number">
+                                                <label for="floatingInput">Phone Number</label>
+                                            </div>
+                                            <div class="form-floating mb-3">
+                                                <input type="password" name="password" class="form-control"
+                                                    id="floatingPassword" placeholder="Password">
+                                                <label for="floatingPassword">Password</label>
+                                            </div>
+                                            <div class="form-floating mb-5">
+                                                <input type="password" name="cpassword" class="form-control"
+                                                    id="cfloatingPassword" placeholder="Confirm Password">
+                                                <label for="floatingPassword">Confirm Password</label>
+                                            </div>
+    
+                                            <div class="text-center">
+                                                <button class="btn btn-danger btn-lg" type="submit" name="button">Sign
+                                                    Up</button>
+    
+                                            </div>
+                                        </form>
+    
+                            </div>
+                            <div class="modal-footer justify-content-center">
+                                <div class="pt-2">
+                                    <p>Already have an account? <a class="text-danger " data-toggle="modal"
+                                            data-target="#log_in_box" href="#log_in_box">Log In</a> </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Log In Modal -->
+                <div class="modal fade" id="log_in_box" tabindex="-1" role="dialog" aria-labelledby="log_in_boxTitle"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-body p-5">
+    
+                                <div class="text-center mb-4">
+                                    <h2>Log In</h2>
+                                    <form action="/login" method="POST">
+                                        <p>Email: <input type="text" name="email" class="form-control" id="floatingPassword" placeholder="name@example.com"></p>
+                                        <p>Password: <input type="password" name="password" class="form-control" id="floatingPassword" placeholder="Password"></p>
+                                        <p><input type="submit" class="main_button" ></p>
+                                        <a href="/registerationForm">Register here</a>
+                                    </form>
+                                </div>
+    
+                            </div>
+                            <div class="modal-footer justify-content-center">
+                                <div class="pt-2">
+                                    <p>You don't have an account? <a class="text-danger" href="/registerationForm"
+                                            data-toggle="modal" data-target="#sign_up_box">Sign Up</a> </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a href="#menu">
+                    <i class="fa fa-cart-plus cart" aria-hidden="true"></i>
+                </a>
+            </div>
+        </div>
+        {% else %}
+        <div class="dropdown">
+            <button class="dropbtn">Hello, {{firstName}}</button>
+            <div class="dropdown-content">
+                <a href="/account/orders">Your orders</a>
+                <a href="/account/profile">Your profile</a>
+                <hr>
+                <a href="/logout">Sign Out</a>
+            </div>
+        </div>
+        {% endif %}
+
+        
+    <main>
+        <section id="hero_section">
+            <article class="bg hero_section text-white">
+                <div class="row hero_section_main">
+                    <div class="col-lg-6 col-sm-12">
+                        <h4 class="hero_sub">NEW IN MENU</h4>
+                        <h1 class="hero_heading">
+                            POUNDED YAM WITH EFO-RIRO AND GOAT MEAT
+                        </h1>
+                    </div>
+                    <div class="col-lg-5 col-sm-12">
+                        <img class="hero_img" src= {{url_for('static', filename="images/pounded_yam-removebg-preview.png", alt="hero image")}} />
+                    </div>
+                </div>
+
+                <div class="hero_box row">
+                    <div class="hero_box_item col-lg-8 col-sm-12">
+                        <p><span><i class="fa fa-bullseye" aria-hidden="true"></i></span> Snails</p>
+                        <p><span><i class="fa fa-bullseye" aria-hidden="true"></i></span> Turkey</p>
+                        <p><span><i class="fa fa-bullseye" aria-hidden="true"></i></span> Shrimps</p>
+                        <p><span><i class="fa fa-bullseye" aria-hidden="true"></i></span> Dried Fish</p>
+                    </div>
+                    <div class="hero_price col-lg-4 col-sm-12 justify-content-center">
+                        <h5 class="bg-white p-1 text-center">ONLY</h5>
+                        <h3> $4,500</h3>
+                    </div>
+                </div>
+            </article>
+        </section>
+        <section id="about_us" class="text-dark bg-white">
+            <article class="row about_us bg">
+                <div class="col">
+                    <img class="hero_img" src= {{url_for('static', filename="images/Nigerian-Food-Agege-Bread-1536x1025.png")}} /></div>
+                <div class="about_us_info col">
+                    <h1 class="about_us_main">We make the best Healthy Local dish in Lasgidi</h1>
+                    <p>
+                        Nigerian cuisine is a fusion of spices and flavours. The list of
+                        foods in Nigeria is endless, and the culinary style in the country
+                        varies from region to region, and can be an excellent insight into
+                        a countrys diverse history and culture.
+                    </p>
+                    <button class="main_button" type="button">More About Us</button>
+                </div>
+            </article>
+        </section>
+        <section id="special_combo" class="s_combo">
+            <article class="bg special_combo text-center">
+                <div>
+                    <h2 class="combo_heading">Special Combo</h2>
+                    <h3 class="combo_sub">Beta naija Food</h3>
+                </div>
+                <div class="row combos">
+                    <div class="combo_card col-lg-3 col-md-4 col-sm-12">
+                        <h2>Pounded Yam</h2>
+                        <p>
+                            Its common to serve the pounded yam alongside some soup, such as
+                            a vegetable stew.
+                        </p>
+                        <h2 class="combo_price">₦3,500</h2>
+                        <button class="combo_button" type="button">ORDER NOW</button>
+                        <div>
+                            <img class="hero_img" src= {{url_for('static', filename="images/iyan _ efo riro.png", alt="hero image")}} />
+</div>
+                    </div>
+                    <div class="combo_card col-lg-3 col-md-4 col-sm-12">
+                        <h2>Ewa Agoyin</h2>
+                        <p>
+                            Its common to serve the pounded yam alongside some soup, such as
+                            a vegetable stew.
+                        </p>
+                        <h2 class="combo_price">₦3,500</h2>
+                        <button class="combo_button" type="button">ORDER NOW</button>
+                        <div>
+                            
+<img class="hero_img" src= {{url_for('static', filename="images/ewa-agoyin-1.jpg.png")}} /></div>
+                    </div>
+                    <div class="combo_card col-lg-3 col-md-4 col-sm-12">
+                        <h2>Eba (Garri)</h2>
+                        <p>
+                            Its common to serve the pounded yam alongside some soup, such as
+                            a vegetable stew.
+                        </p>
+                        <h2 class="combo_price">₦3,500</h2>
+                        <button class="combo_button" type="button">ORDER NOW</button>
+                        <div>
+                            <img class="hero_" src= {{url_for('static', filename="images/nigerian-food-garri.jpg.png")}} />
+                        </div>
+                    </div>
+                    <div class="combo_card col-lg-3 col-md-4 col-sm-12">
+                        <h2>Egusi Soup</h2>
+                        <p>
+                            Its common to serve the pounded yam alongside some soup, such as
+                            a vegetable stew.
+                        </p>
+                        <h2 class="combo_price">₦3,500</h2>
+                        <button class="combo_button" type="button">ORDER NOW</button>
+                        <div>
+                            <img class="hero_img" src= {{url_for('static', filename="images/nigerian-food-egusi-soup.jpg.png")}} />                        </div>
+                    </div>
+                </div>
+            </article>
+        </section>
+        <section id="menu" class="bg-white">
+            <article class="bg menu text-center">
+                <div>
+                    <h3 class="combo_sub">Menu</h3>
+                    <h2 class="combo_heading">
+                        Choose your combo <br />
+                        & order now!
+                    </h2>
+                </div>
+                <div class="accordion">
+                    <input type="radio" name="select" class="accordion-select" checked />
+                    <div class="accordion-title">
+                        <span>Staple Foods (Swallow)</span>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="menu_box">
+                            <div class="menu_items">
+                                <h5>RECOMMENDED</h5>
+                                <div class="menu_food">
+                                    <div>
+                                        <a href="">
+                                            <h4>Amala with Ewedu and Gbegiri</h4>
+                                        </a>
+                                        <p>
+                                            Can come with goat meat, ponmo, shrimps, chicken and
+                                            turkey. Choice of side also allowed
+                                        </p>
+                                    </div>
+                                    <div>
+                                        <h4 class="menu_price">₦3,500</h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="menu_items">
+                                <h5>NEW</h5>
+                                <div class="menu_food">
+                                    <div>
+                                        <a href="">
+                                            <h4>Amala with Ewedu and Gbegiri</h4>
+                                        </a>
+                                        <p>
+                                            Can come with goat meat, ponmo, shrimps, chicken and
+                                            turkey. Choice of side also allowed
+                                        </p>
+                                    </div>
+                                    <div>
+                                        <h4 class="menu_price">₦3,500</h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="menu_items">
+                                <h5>RECOMMENDED</h5>
+                                <div class="menu_food">
+                                    <div>
+                                        <a href="">
+                                            <h4>Amala with Ewedu and Gbegiri</h4>
+                                        </a>
+                                        <p>
+                                            Can come with goat meat, ponmo, shrimps, chicken and
+                                            turkey. Choice of side also allowed
+                                        </p>
+                                    </div>
+                                    <div>
+                                        <h4 class="menu_price">₦3,500</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="menu_box">
+                            <div class="menu_items">
+                                <h5>NEW</h5>
+                                <div class="menu_food">
+                                    <div>
+                                        <a href="">
+                                            <h4>Amala with Ewedu and Gbegiri</h4>
+                                        </a>
+                                        <p>
+                                            Can come with goat meat, ponmo, shrimps, chicken and
+                                            turkey. Choice of side also allowed
+                                        </p>
+                                    </div>
+                                    <div>
+                                        <h4 class="menu_price">₦3,500</h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="menu_items">
+                                <h5>Combo</h5>
+                                <div class="menu_food">
+                                    <div>
+                                        <a href="">
+                                            <h4>Amala with Ewedu and Gbegiri</h4>
+                                        </a>
+                                        <p>
+                                            Can come with goat meat, ponmo, shrimps, chicken and
+                                            turkey. Choice of side also allowed
+                                        </p>
+                                    </div>
+                                    <div>
+                                        <h4 class="menu_price">₦3,500</h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="menu_items">
+                                <h5>RECOMMENDED</h5>
+                                <div class="menu_food">
+                                    <div>
+                                        <a href="">
+                                            <h4>Amala with Ewedu and Gbegiri</h4>
+                                        </a>
+                                        <p>
+                                            Can come with goat meat, ponmo, shrimps, chicken and
+                                            turkey. Choice of side also allowed
+                                        </p>
+                                    </div>
+                                    <div>
+                                        <h4 class="menu_price">₦3,500</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <input type="radio" name="select" class="accordion-select" />
+                    <div class="accordion-title"><span>Local Soups</span></div>
+                    <div class="accordion-content">
+                        <div class="menu_box">
+                            <div class="menu_items">
+                                <h5>RECOMMENDED</h5>
+                                <div class="menu_food">
+                                    <div>
+                                        <a href="">
+                                            <h4>Amala with Ewedu and Gbegiri</h4>
+                                        </a>
+                                        <p>
+                                            Can come with goat meat, ponmo, shrimps, chicken and
+                                            turkey. Choice of side also allowed
+                                        </p>
+                                    </div>
+                                    <div>
+                                        <h4 class="menu_price">₦3,500</h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="menu_items">
+                                <h5>NEW</h5>
+                                <div class="menu_food">
+                                    <div>
+                                        <a href="">
+                                            <h4>Amala with Ewedu and Gbegiri</h4>
+                                        </a>
+                                        <p>
+                                            Can come with goat meat, ponmo, shrimps, chicken and
+                                            turkey. Choice of side also allowed
+                                        </p>
+                                    </div>
+                                    <div>
+                                        <h4 class="menu_price">₦3,500</h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="menu_items">
+                                <h5>RECOMMENDED</h5>
+                                <div class="menu_food">
+                                    <div>
+                                        <a href="">
+                                            <h4>Amala with Ewedu and Gbegiri</h4>
+                                        </a>
+                                        <p>
+                                            Can come with goat meat, ponmo, shrimps, chicken and
+                                            turkey. Choice of side also allowed
+                                        </p>
+                                    </div>
+                                    <div>
+                                        <h4 class="menu_price">₦3,500</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="menu_box">
+                            <div class="menu_items">
+                                <h5>NEW</h5>
+                                <div class="menu_food">
+                                    <div>
+                                        <a href="">
+                                            <h4>Amala with Ewedu and Gbegiri</h4>
+                                        </a>
+                                        <p>
+                                            Can come with goat meat, ponmo, shrimps, chicken and
+                                            turkey. Choice of side also allowed
+                                        </p>
+                                    </div>
+                                    <div>
+                                        <h4 class="menu_price">₦3,500</h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="menu_items">
+                                <h5>Combo</h5>
+                                <div class="menu_food">
+                                    <div>
+                                        <a href="">
+                                            <h4>Amala with Ewedu and Gbegiri</h4>
+                                        </a>
+                                        <p>
+                                            Can come with goat meat, ponmo, shrimps, chicken and
+                                            turkey. Choice of side also allowed
+                                        </p>
+                                    </div>
+                                    <div>
+                                        <h4 class="menu_price">₦3,500</h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="menu_items">
+                                <h5>RECOMMENDED</h5>
+                                <div class="menu_food">
+                                    <div>
+                                        <a href="">
+                                            <h4>Amala with Ewedu and Gbegiri</h4>
+                                        </a>
+                                        <p>
+                                            Can come with goat meat, ponmo, shrimps, chicken and
+                                            turkey. Choice of side also allowed
+                                        </p>
+                                    </div>
+                                    <div>
+                                        <h4 class="menu_price">₦3,500</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <input type="radio" name="select" class="accordion-select" />
+                    <div class="accordion-title"><span>Snacks & Bites</span></div>
+                    <div class="accordion-content">
+                        <div class="menu_box">
+                            <div class="menu_items">
+                                <h5>RECOMMENDED</h5>
+                                <div class="menu_food">
+                                    <div>
+                                        <a href="">
+                                            <h4>Amala with Ewedu and Gbegiri</h4>
+                                        </a>
+                                        <p>
+                                            Can come with goat meat, ponmo, shrimps, chicken and
+                                            turkey. Choice of side also allowed
+                                        </p>
+                                    </div>
+                                    <div>
+                                        <h4 class="menu_price">₦3,500</h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="menu_items">
+                                <h5>NEW</h5>
+                                <div class="menu_food">
+                                    <div>
+                                        <a href="">
+                                            <h4>Amala with Ewedu and Gbegiri</h4>
+                                        </a>
+                                        <p>
+                                            Can come with goat meat, ponmo, shrimps, chicken and
+                                            turkey. Choice of side also allowed
+                                        </p>
+                                    </div>
+                                    <div>
+                                        <h4 class="menu_price">₦3,500</h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="menu_items">
+                                <h5>RECOMMENDED</h5>
+                                <div class="menu_food">
+                                    <div>
+                                        <a href="">
+                                            <h4>Amala with Ewedu and Gbegiri</h4>
+                                        </a>
+                                        <p>
+                                            Can come with goat meat, ponmo, shrimps, chicken and
+                                            turkey. Choice of side also allowed
+                                        </p>
+                                    </div>
+                                    <div>
+                                        <h4 class="menu_price">₦3,500</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="menu_box">
+                            <div class="menu_items">
+                                <h5>NEW</h5>
+                                <div class="menu_food">
+                                    <div>
+                                        <a href="">
+                                            <h4>Amala with Ewedu and Gbegiri</h4>
+                                        </a>
+                                        <p>
+                                            Can come with goat meat, ponmo, shrimps, chicken and
+                                            turkey. Choice of side also allowed
+                                        </p>
+                                    </div>
+                                    <div>
+                                        <h4 class="menu_price">₦3,500</h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="menu_items">
+                                <h5>Combo</h5>
+                                <div class="menu_food">
+                                    <div>
+                                        <a href="">
+                                            <h4>Amala with Ewedu and Gbegiri</h4>
+                                        </a>
+                                        <p>
+                                            Can come with goat meat, ponmo, shrimps, chicken and
+                                            turkey. Choice of side also allowed
+                                        </p>
+                                    </div>
+                                    <div>
+                                        <h4 class="menu_price">₦3,500</h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="menu_items">
+                                <h5>RECOMMENDED</h5>
+                                <div class="menu_food">
+                                    <div>
+                                        <a href="">
+                                            <h4>Amala with Ewedu and Gbegiri</h4>
+                                        </a>
+                                        <p>
+                                            Can come with goat meat, ponmo, shrimps, chicken and
+                                            turkey. Choice of side also allowed
+                                        </p>
+                                    </div>
+                                    <div>
+                                        <h4 class="menu_price">₦3,500</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <input type="radio" name="select" class="accordion-select" />
+                    <div class="accordion-title"><span>Drinks & Cocktails</span></div>
+                    <div class="accordion-content">
+                        <div class="menu_box">
+                            <div class="menu_items">
+                                <h5>RECOMMENDED</h5>
+                                <div class="menu_food">
+                                    <div>
+                                        <a href="">
+                                            <h4>Amala with Ewedu and Gbegiri</h4>
+                                        </a>
+                                        <p>
+                                            Can come with goat meat, ponmo, shrimps, chicken and
+                                            turkey. Choice of side also allowed
+                                        </p>
+                                    </div>
+                                    <div>
+                                        <h4 class="menu_price">₦3,500</h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="menu_items">
+                                <h5>NEW</h5>
+                                <div class="menu_food">
+                                    <div>
+                                        <a href="">
+                                            <h4>Amala with Ewedu and Gbegiri</h4>
+                                        </a>
+                                        <p>
+                                            Can come with goat meat, ponmo, shrimps, chicken and
+                                            turkey. Choice of side also allowed
+                                        </p>
+                                    </div>
+                                    <div>
+                                        <h4 class="menu_price">₦3,500</h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="menu_items">
+                                <h5>RECOMMENDED</h5>
+                                <div class="menu_food">
+                                    <div>
+                                        <a href="">
+                                            <h4>Amala with Ewedu and Gbegiri</h4>
+                                        </a>
+                                        <p>
+                                            Can come with goat meat, ponmo, shrimps, chicken and
+                                            turkey. Choice of side also allowed
+                                        </p>
+                                    </div>
+                                    <div>
+                                        <h4 class="menu_price">₦3,500</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="menu_box">
+                            <div class="menu_items">
+                                <h5>NEW</h5>
+                                <div class="menu_food">
+                                    <div>
+                                        <a href="">
+                                            <h4>Amala with Ewedu and Gbegiri</h4>
+                                        </a>
+                                        <p>
+                                            Can come with goat meat, ponmo, shrimps, chicken and
+                                            turkey. Choice of side also allowed
+                                        </p>
+                                    </div>
+                                    <div>
+                                        <h4 class="menu_price">₦3,500</h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="menu_items">
+                                <h5>Combo</h5>
+                                <div class="menu_food">
+                                    <div>
+                                        <a href="">
+                                            <h4>Amala with Ewedu and Gbegiri</h4>
+                                        </a>
+                                        <p>
+                                            Can come with goat meat, ponmo, shrimps, chicken and
+                                            turkey. Choice of side also allowed
+                                        </p>
+                                    </div>
+                                    <div>
+                                        <h4 class="menu_price">₦3,500</h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="menu_items">
+                                <h5>RECOMMENDED</h5>
+                                <div class="menu_food">
+                                    <div>
+                                        <a href="">
+                                            <h4>Amala with Ewedu and Gbegiri</h4>
+                                        </a>
+                                        <p>
+                                            Can come with goat meat, ponmo, shrimps, chicken and
+                                            turkey. Choice of side also allowed
+                                        </p>
+                                    </div>
+                                    <div>
+                                        <h4 class="menu_price">₦3,500</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </section>
+        <section id="delivery">
+            <article class="delivery bg row">
+                <div class="delivery_main col-lg-4 col-md-12 col-sm-12">
+                    <h3 class="combo_sub">Delivery</h3>
+                    <h2 class="combo_heading">
+                        Choose what you want, select a pick up time
+                    </h2>
+                    <p>
+                        As well known and we are very busy all days advice you. advice you
+                        to call us of before arriving, so we can guarantee your seat.
+                    </p>
+
+                    <button class="main_button" type="button">Order Online</button>
+                </div>
+                <div class="deilvery_img col-lg-4 col-md-12 col-sm-12">
+                    <div>
+                        <img src={{url_for('static', filename="images/Pizza-delivery-illustration-transparent-PNG.pngalt=%22%22")}}alt=""
+                            class="delivery_img_main" />
+                    </div>
+                </div>
+
+                <div class="reward col-lg-4 col-md-12 col-sm-12">
+                    <h3 class="combo_sub">Reward</h3>
+                    <h2 class="combo_heading">
+                        Earn points every time you order online
+                    </h2>
+                    <p>
+                        As well known and we are very busy all days advice you. advice you
+                        to call us of before arriving, so we can guarantee your seat.
+                    </p>
+
+                    <button class="main_button" type="button">Learn More</button>
+                </div>
+            </article>
+        </section>
+        <section id="testimonial">
+            <article class="bg testimonial">
+                <div id="carouselExampleIndicators" class="carousel carousel-dark slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                            class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                            aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="testimonial_main row">
+                                <div class="t_img col-lg-4">
+                                    <img class="testimonial_img" src= {{url_for('static', filename="images/eating.jpg")}} alt="" />
+                                </div>
+                                <div class="testimonial_info col-lg-4">
+                                    <img src= {{url_for('static', filename="images/quote.png")}} alt="" />
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                        Sapiente reprehenderit consequatur incidunt culpa saepe
+                                        odio et sequi dolorum! Repudiandae perspiciatis, debitis
+                                        excepturi corrupti libero adipisci dolore ex iure atque
+                                        fugiat!
+                                    </p>
+                                    <h4>Obembe Daniel</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="testimonial_main row">
+                                <div class="t_img col-lg-4">
+                                    <img class="testimonial_img" src={{url_for('static', filename="images/elizeu-dias-2EGNqazbAMk-unsplash.jpg")}}
+                                        alt="" />
+                                </div>
+                                <div class="testimonial_info col-lg-4">
+                                    <img src={{url_for('static', filename="images/quote.png")}} alt="" />
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                        Sapiente reprehenderit consequatur incidunt culpa saepe
+                                        odio et sequi dolorum! Repudiandae perspiciatis, debitis
+                                        excepturi corrupti libero adipisci dolore ex iure atque
+                                        fugiat!
+                                    </p>
+                                    <h4>Obembe Daniel</h4>
+                                </div>
+                            </div>
+                            <div class="testimonial_main row">
+                                <div class="t_img col-lg-4">
+                                    <img class="testimonial_img" src={{url_for('static', filename="images/joey-nicotra-DNikBY1J--g-unsplash.jpg")}}
+                                        alt="" />
+                                </div>
+                                <div class="testimonial_info col-lg-4">
+                                    <img src={{url_for('static', filename="images/quote.png")}} alt="" />
+                                    
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                        Sapiente reprehenderit consequatur incidunt culpa saepe
+                                        odio et sequi dolorum! Repudiandae perspiciatis, debitis
+                                        excepturi corrupti libero adipisci dolore ex iure atque
+                                        fugiat!
+                                    </p>
+                                    <h4>Obembe Daniel</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon indicator" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon indicator" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </article>
+        </section>
+        <section id="gallery" class="bg_color">
+            <article class="gallery bg">
+                <div class="gallery_heading text-center">
+                    <h4 class="text-danger combo_sub">GALLERY</h4>
+                    <h2 class="combo_heading">Naija Food gallery</h2>
+                </div>
+                <div class="gallery_img row">
+                    <img class="gallery_img_main col" src={{url_for('static', filename="images/anita-austvika-taZA8nSvaao-unsplash.jpg")}} alt="" />
+                    <img class="gallery_img_main col" src={{url_for('static', filename="images/spencer-davis-o_XkavUaGEw-unsplash.jpg")}} alt="" />
+                    <img class="gallery_img_main col" src=
+{{url_for('static', filename="images/spencer-davis-q3ApAZsS1os-unsplash.jpg")}} alt="" />
+                    <img class="gallery_img_main col" src={{url_for('static', filename="images/tomas-martinez-1vlUaiEQR6k-unsplash.jpg")}} alt="" />
+                    <img class="gallery_img_main col" src={{url_for('static', filename="images/zachariah-hagy-MCKrW7fB7Pw-unsplash.jpg")}} alt="" />
+                    <img class="gallery_img_main col" src={{url_for('static', filename="images/jay-wennington-N_Y88TWmGwA-unsplash.jpg")}} alt="" />
+                    <img class="gallery_img_main col" src=
+{{url_for('static', filename="images/ivan-stern-LOLSb7m6XkU-unsplash.jpg")}} alt="" />
+                    <img class="gallery_img_main col" src=
+{{url_for('static', filename="images/rohan-g--mwNJswDlXE-unsplash.jpg")}}
+alt="" />
+                </div>
+            </article>
+        </section>
+        <section id="contact" class="bg-white">
+            <article class="contact bg">
+                <div>
+                    <h2 class="combo_heading text-center">Contact Us</h2>
+                    <h4 class="text-center">
+                        Any question or remarks? Just write us a message
+                    </h4>
+                </div>
+                <div class="contact_main row">
+                    <div class="col-lg-4 contact_address text-white">
+                        <div>
+                            <h3>Contact Information</h3>
+                            <p>
+                                Fill up the form and our team will get back to you within 24
+                                hrs
+                            </p>
+                        </div>
+                        <div class="contact_details">
+                            <p><span><i class="fa fa-phone" aria-hidden="true"></i></span> 09035915128</p>
+                            <p><span><i class="fa fa-envelope" aria-hidden="true"></i></span> menjar@gmail.com</p>
+                            <p><span><i class="fa fa-map-marker" aria-hidden="true"></i></span> 64 maryland road ikeja,
+                                Lagos</p>
+                        </div>
+                        <div class="social_media">
+                            <div class="social">
+                                <div><a href="">
+                                        <i class="fa fa-instagram" aria-hidden="true"></i>
+                                    </a></div>
+
+                                <div><a href="">
+                                        <i class="fa fa-twitter" aria-hidden="true"></i>
+                                    </a></div>
+                                <div> <a href="">
+                                        <i class="fa fa-youtube-play" aria-hidden="true"></i>
+                                    </a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-8 contact_info">
+                        <form class="contact_form" action="">
+                            <div class="contact_name row">
+                                <div class="contact_mail col-lg-6 col-sm-12">
+                                    <div class="col">
+                                        <label class="" for="first_name">First Name</label>
+                                        <br />
+                                        <input class="col" type="text" id="first_name" name="first_name" required
+                                            minlength="2" placeholder="Your first name" />
+                                    </div>
+                                    <div class="">
+                                        <label class="" for="last_name">Last Name</label> <br />
+                                        <input class="" type="text" id="last_name" required minlength="2"
+                                            name="last name" placeholder="Your last name" />
+                                    </div>
+                                </div>
+                                <div class="contact_mail col">
+                                    <div class="">
+                                        <label class="" for="email">E-mail</label> <br />
+                                        <input class="col" type="email" id="email" name="e-mail" required minlength="2"
+                                            placeholder="example@gmail.com
+                      required" />
+                                    </div>
+                                    <div class="">
+                                        <label class="" for="phone">Phone</label> <br />
+                                        <input class="" type="number" id="phone" required minlength="2" name="phone"
+                                            placeholder="Phone No" />
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="contact_help">
+                                <h4>What do you need help with?</h4>
+                                <div class="contact_des">
+                                    <div>
+                                        <input type="radio" id="online_order" name="online order"
+                                            value="Online Order" />
+                                        <label for="online_order">Online Order</label>
+                                    </div>
+                                    <div>
+                                        <input type="radio" id="online_order" name="online order"
+                                            value="Online Order" />
+                                        <label for="online_order">Reservations</label>
+                                    </div>
+                                    <div>
+                                        <input type="radio" id="online_order" name="online order"
+                                            value="Online Order" />
+                                        <label for="online_order">Payment Issue</label>
+                                    </div>
+                                    <div>
+                                        <input type="radio" id="online_order" name="online order"
+                                            value="Online Order" />
+                                        <label for="online_order">Enquires/Others</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="col">
+                                    <label class="" for="message">Message</label> <br />
+                                    <textarea name="message" id="message" cols="80" rows="1"
+                                        placeholder="Write your message"></textarea>
+                                </div>
+                            </div>
+                            <div class="form_button">
+                                <button class="main_button" type="submit">Submit</button>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+                <div class="reservation">
+                    <h2 class="combo_heading text-center">Book a Table</h2>
+                    <div class="reservation_form">
+                        <form action="" class="text-white">
+                            <div class="form_item">
+                                <label class="" for="date">Date</label> <br />
+                                <input class="" type="date" id="date" required minlength="2" name="date"
+                                    placeholder="Date" />
+                            </div>
+                            <div class="form_item">
+                                <label class="" for="time">Time</label> <br />
+                                <input class="" type="time" id="time" required minlength="2" name="time"
+                                    placeholder="Time" />
+                            </div>
+                            <div class="form_item">
+                                <label class="" for="email">Email</label> <br />
+                                <input class="" type="email" id="email" required minlength="2" name="email"
+                                    placeholder="example@email.com" />
+                            </div>
+                            <div>
+                                <button class="main_button_inverse" type="submit">
+                                    Book Now
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </article>
+        </section>
+    </main>
+    <footer>
+        <div id="footer">
+            <article class="bg footer text-white">
+                <div class="row footer_box">
+                    <div class="col footer_section_main">
+                        <div><img src=
+                            {{url_for('static', filename="images/dinner.png")}} alt="Menjar Logo" /></div>
+                        <h3>Menjar</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.imos libero distinctio.</p>
+                    </div>
+                    <div class="col footer_section_main">
+                        <h3>Navigation</h3>
+                        <div class="footer_section">
+                            <div><a href="#home">Home</a></div>
+                            <div><a href="#menu">Menu</a></div>
+                            <div><a href="#about">About Us</a></div>
+                            <div><a href="#gallery">Gallery</a></div>
+                            <div><a href="#contact">Contact</a></div>
+                        </div>
+
+                    </div>
+                    <div class="col footer_section_main">
+                        <h3>Follow Us</h3>
+                        <div class="footer_section">
+                            <div><a href="">
+                                    <i class="fa fa-instagram" aria-hidden="true"></i> @menja_food
+                                </a></div>
+
+                            <div><a href="">
+                                    <i class="fa fa-twitter" aria-hidden="true"></i> @menja_food
+                                </a></div>
+                            <div> <a href="">
+                                    <i class="fa fa-youtube-play" aria-hidden="true"></i> @menja_food
+                                </a></div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class=" copyright row text-center">
+                    <p>Copyright Menjar @2022</p>
+                </div>
+            </article>
+</div>
+    </footer>
+
+    <script src="js/app.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
+
+
+        
+    </body>
+       
+
+    </html>
