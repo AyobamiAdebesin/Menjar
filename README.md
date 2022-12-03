@@ -26,6 +26,9 @@ It is dependent on a specific locale. We built the app for the sole purpose of o
 
 ## Screenshots
 ![Example screenshot](./img/menjar_screenshot-1.png)
+![Example screenshot](./img/menjar_screenshot-2.png)
+![Example screenshot](./img/menjar_screenshot-3.png)
+![Example screenshot](./img/menjar_screenshot-4.png)
 
 ## Technologies
 * Python
