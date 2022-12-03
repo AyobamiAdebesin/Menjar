@@ -25,7 +25,7 @@ It is dependent on a specific locale. We built the app for the sole purpose of o
 
 
 ## Screenshots
-![Example screenshot](./img/screenshot.png)
+![Example screenshot](./img/menjar_screenshot-1.png)
 
 ## Technologies
 * Python
@@ -66,4 +66,3 @@ Lagos has been a rich multicultural State in the nation of Nigeria, housing seve
 Daniel Obembe
 Oyedele Bolaji
 Adebesin Ayobami
-
