@@ -48,7 +48,7 @@ Link to a demo version would be provided as soon as the web app is hosted.
 The major features of the web app include;
 * Online order of locale cuisens.
 * Book spaces ahead in the resutureant fro a special date.
-* Easy paymeny process.
+* Easy payment process.
 * Includes dishes from several culture.
 
 To-do list:
