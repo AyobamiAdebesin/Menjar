@@ -1,6 +1,6 @@
 # Menjar
-> A Seamless Food Delivery web App. 
-We are solving the problem of people having access to local dishes from different cultures. This app will help users place orders or book reservations for local dishes. It will allow users to have access to dishes from other cultures and denominations.
+> Menjar is a seamless food delivery web application. 
+This app will help users place orders or book reservations for local dishes. It will allow users to have access to dishes from other cultures and denominations.
 
 
 ## Table of contents
@@ -50,7 +50,6 @@ The major features of the web app include;
 * Book spaces ahead in the resutureant fro a special date.
 * Easy paymeny process.
 * Includes dishes from several culture.
-* 
 
 To-do list:
 * Include a profile page for users after sign up.
