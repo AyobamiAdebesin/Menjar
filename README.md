@@ -1,6 +1,6 @@
-                                                                          # Menjar
-> Seamless Food Delivery web App. 
-> We are solving the problem of people having access to local dishes from different cultures. This app will help users place orders or book reservations for local dishes. It will allow users to have access to dishes from other cultures and denominations.
+# Menjar
+> A Seamless Food Delivery web App. 
+We are solving the problem of people having access to local dishes from different cultures. This app will help users place orders or book reservations for local dishes. It will allow users to have access to dishes from other cultures and denominations.
 
 
 ## Table of contents
@@ -66,6 +66,8 @@ Project is: _in progress_
 Lagos has been a rich multicultural State in the nation of Nigeria, housing several people with different cultures, several of whom become homesick due to lack of familiarity or indigenous meals around them, we intend to solve this problem by making their local dishes readily available to them.
 
 ## Authors
-Daniel Obembe
-Oyedele Bolaji
-Adebesin Ayobami
+* Adebesin Ayobami
+* Daniel Obembe
+* Oyedele Bolaji
+
+
