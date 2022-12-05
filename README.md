@@ -1,5 +1,5 @@
 # Menjar
-> Menjar is a seamless food delivery web application. 
+> Menjar is a seamless food delivery web application.
 This app will help users place orders or book reservations for local dishes. It will allow users to have access to dishes from other cultures and denominations.
 
 
@@ -67,6 +67,6 @@ Lagos has been a rich multicultural State in the nation of Nigeria, housing seve
 ## Authors
 * Adebesin Ayobami
 * Daniel Obembe
-* Oyedele Bolaji
+* Oyedele Bolaji.
 
 
