@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Categories</title>
+
+<link rel="stylesheet" href={{ url_for('static', filename='css/style.css') }} />
+
+</head>
+<body>
+	<header class="">
+		<div><img src= {{url_for('static', filename ="/images/Menjar-logo.png")}} alt="Menjar Logo" /></div>
+	</header>
+<h1>Manage categories</h1>
+<div class="display">
+	<div class="displayCategory">
+		<h3>Categories in Database </h3>
+		<ul>
+			{% for row in categoryData %}
+			<li><a href="/displayCategory?categoryId={{row[0]}}">{{row[1]}}</a></li>
+			{% endfor %}
+		</ul>
+	</div>
+    <form action="/addCategory" method="POST">
+        New Category: <input type="text" name="newCategory"><br> 
+        <input type="submit">
+    </form>
+	<form action="/removeCat" method="POST">
+		<h3> Remove Category</h3>
+		Category: <select name="category">
+			{% for row in categoryData %}
+				<option value="{{row[0]}}">{{row[1]}}</option>
+			{% endfor %}
+		</select><br>
+		<input type="submit">
+	</form>
+</body>
+</html>

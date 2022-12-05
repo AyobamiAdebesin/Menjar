@@ -20,12 +20,10 @@
         integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous" />
 
     <!-- LINK TO FONT AWESOME STYLESHEET -->
-    <link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css">
     <script type="text/javascript" src="{{ url_for('static', filename = 'js/app.js') }}">
     </script>
 
     <!-- Link to the CSS file -->
-    <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href={{url_for('static', filename='css/style.css')}} />
     <link rel="stylesheet" href={{url_for('static', filename='css/font-awesome/css/font-awesome.min.css')}} />
 
@@ -70,6 +68,7 @@
                 </div>
             </nav>
         </div>
+       
         {% if not loggedIn %}
    
             <div class="order">
@@ -126,8 +125,8 @@
                                                 <input type="password" name="cpassword" class="form-control"
                                                     id="cfloatingPassword" placeholder="Confirm Password">
                                                 <label for="floatingPassword">Confirm Password</label>
-                                            </div>
-    
+
+                                                
                                             <div class="text-center">
                                                 <button class="btn btn-danger btn-lg" type="submit" name="button">Sign
                                                     Up</button>
@@ -182,9 +181,12 @@
         <div class="dropdown">
             <button class="dropbtn">Hello, {{firstName}}</button>
             <div class="dropdown-content">
-                <a href="/account/orders">Your orders</a>
-                <a href="/account/profile">Your profile</a>
+                <a href="/checkout">Check out</a>
+                <a href="/cart">Cart</a>
                 <hr>
+                <a href="/manager">Manage Categories and Meal Items</a>
+                <a href="/manageMeals">Manage Meals</a>
+                <a href="/manageCategory">Manage categories</a>
                 <a href="/logout">Sign Out</a>
             </div>
         </div>
@@ -200,10 +202,12 @@
                         <h1 class="hero_heading">
                             POUNDED YAM WITH EFO-RIRO AND GOAT MEAT
                         </h1>
+                        <div class="display">
+                            <div class="col-lg-5 col-sm-12">
+                                <img class="hero_img" src= {{url_for('static', filename="images/pounded_yam-removebg-preview.png", alt="hero image")}} />
+                            </div>
                     </div>
-                    <div class="col-lg-5 col-sm-12">
-                        <img class="hero_img" src= {{url_for('static', filename="images/pounded_yam-removebg-preview.png", alt="hero image")}} />
-                    </div>
+
                 </div>
 
                 <div class="hero_box row">
@@ -220,6 +224,14 @@
                 </div>
             </article>
         </section>
+        <div class="displayCategory">
+            <h2>Shop by Category: </h2>
+            <ul>
+                {% for row in categoryData %}
+                <li><a href="/displayCategory?categoryId={{row[0]}}">{{row[1]}}</a></li>
+                {% endfor %}
+            </ul>
+        </div>
         <section id="about_us" class="text-dark bg-white">
             <article class="row about_us bg">
                 <div class="col">
@@ -764,8 +776,7 @@
                 </div>
                 <div class="deilvery_img col-lg-4 col-md-12 col-sm-12">
                     <div>
-                        <img src={{url_for('static', filename="images/Pizza-delivery-illustration-transparent-PNG.pngalt=%22%22")}}alt=""
-                            class="delivery_img_main" />
+                        <img src={{url_for('static', filename="images/Pizza-delivery-illustration-transparent-PNG.png")}} alt="dispatch" class="delivery_img_main" />
                     </div>
                 </div>
 
@@ -1070,7 +1081,7 @@ alt="" />
 </div>
     </footer>
 
-    <script src="js/app.js"></script>
+
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"

@@ -4,7 +4,9 @@ body {
     margin: 2rem 0 0;
     background-color: #fbbe36;
 }
-
+.trolley{
+    max-width: 10px;
+}
 .bg {
     margin: 0 15%;
 }

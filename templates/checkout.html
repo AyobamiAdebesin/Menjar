@@ -1,0 +1,25 @@
+<html>
+<head>
+<title>Check out</title>
+<script type="text/javascript" src="{{ url_for('static', filename = 'js/app.js') }}">
+</script>
+</head>
+<body>
+
+    <form method="POST" action="https://checkout.flutterwave.com/v3/hosted/pay">
+   		<div id="total">
+         
+        </div>
+        <input type="hidden" name="public_key" value="FLWPUBK_TEST-66b91b5b24764fca0b3141c4ec9cdc63-X" />
+        <p>Email <input type="text" name="customer[email]"/></p>
+        <p>Name on card <input type="text" name="customer[name]" /></p>
+        <p>Amount <input type="hidden" name="amount" value={{totalPrice}}/> <span id="subtotal">Subtotal</span> : ₦{{totalPrice}}</p>
+        <input type="hidden" name="currency" value="NGN" />
+        <p> <input type="hidden" name="redirect_url" value="https://demoredirect.localhost.me/" /> </p>
+        <p><button type="submit" id="start-payment-button">Pay Now</button>
+      </form>
+</body>
+</html>
+
+
+

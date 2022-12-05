@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Category: {{categoryName}}</title>
+<link rel="stylesheet" href={{ url_for('static', filename='css/style.css') }} />
+</head>
+<body>
+	<div><img src= {{url_for('static', filename ="/images/Menjar-logo.png")}} alt="Menjar Logo" /></div>
+<div>
+	<h2>Showing all meals of Category {{categoryName}}:</h2>
+	{% for itemData in data %}
+	<table>
+		<tr id="productName">
+			{% for row in itemData %}
+			<td>
+				{{row[1]}}
+			</td>
+			{% endfor %}
+		</tr>
+		<tr id="productImage">
+			{% for row in itemData %}
+			<td>
+				<a href="/mealDescription?mealId={{row[0]}}">
+					<img src={{ url_for('static', filename='uploads/' + row[3]) }} id="itemImage" />
+				</a>
+			</td>
+			{% endfor %}
+		</tr>
+		<tr id="productPrice">
+			{% for row in itemData %}
+			<td>
+				${{row[2]}}
+			</td>
+			{% endfor %}
+		</tr>
+	</table>
+	{% endfor %}
+</div>
+</body>
+</html>

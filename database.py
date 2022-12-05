@@ -1,9 +1,9 @@
 import sqlite3
 
-#Open database
+# Open database
 conn = sqlite3.connect('database.db')
 
-#Create table
+# Create table
 conn.execute('''CREATE TABLE users
 		(userId INTEGER PRIMARY KEY,
 		password TEXT,
@@ -30,6 +30,7 @@ conn.execute('''CREATE TABLE categories
 		name TEXT
 		)''')
 
+conn.execute('''CREATE TABLE cart (userId INTEGER, mealId INTEGER, FOREIGN KEY(userId) REFERENCES users(userId), FOREIGN KEY(mealId) REFERENCES meal_items(mealId))''')
 
 
 conn.close()

@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Admin Menu</title>
+
+<link rel="stylesheet" href={{ url_for('static', filename='css/style.css') }} />
+
+</head>
+<body>
+            <header class="">
+                <div><img src= {{url_for('static', filename ="/images/Menjar-logo.png")}} alt="Menjar Logo" /></div>
+            </header>
+    <h2>Manage Meal Categories And Meals</h2>
+<div class="display">
+	<div class="displayCategory">
+		<h2>Categories in Database </h2>
+		<ul>
+			{% for row in categoryData %}
+			<li><a href="/displayCategory?categoryId={{row[0]}}">{{row[1]}}</a></li>
+			{% endfor %}
+		</ul>
+	</div>
+	
+<h2>Add New Meal</h2>
+<form action="/addItem" method="POST" enctype="multipart/form-data">
+<p>Name:</p> <input type="text" name="name"><br>
+<p>Price: </p><input type="text" name="price"><br>
+<p>Description:</p> <textarea name="description" rows=3 cols="40"></textarea><br>
+<p>Image:</p> <input type="file" name="image"><br>
+<p>Select Meal Category:</p> <select name="category">
+	{% for row in categoryData %}
+		<option value="{{row[0]}}">{{row[1]}}</option>
+	{% endfor %}
+</select><br>
+<input type="submit">
+</form>
+
+<a href="/remove"><h3>Click here to remove a meal item</h3></a>
+
+<h2>Add New Category:</h2> 
+<p>Category Name:</p>
+<form action="/addCategory" method="POST">
+<input type="text" name="newCategory"><br> 
+<input type="submit">
+</form>
+<form action="/removeCat" method="POST">
+	<h2> Remove Category</h2>
+	<p>Select Category:</p> <select name="category">
+		{% for row in categoryData %}
+			<option value="{{row[0]}}">{{row[1]}}</option>
+		{% endfor %}
+	</select><br>
+	<input type="submit">
+</form>
+</body>
+</html>

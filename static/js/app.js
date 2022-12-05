@@ -33,17 +33,6 @@ function validate() {
     }
 }
 
-function validate() {
-    var pass = document.getElementById("").value;
-    var cpass = document.getElementById("cfloatingPassword").value;
-    if (pass == cpass) {
-        return true;
-    } else {
-        alert("Passwords do not match");
-        return false;
-    }
-}
-
 
 // // When the user scrolls the page, execute myFunction
 // window.onscroll = function() {myFunction()};

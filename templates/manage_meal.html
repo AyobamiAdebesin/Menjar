@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Remove</title>
+<link rel="stylesheet" href={{url_for('static', filename='css/style.css')}}>
+</link>
+</head>
+<body>
+    <header class="">
+        <div><img src= {{url_for('static', filename ="/images/Menjar-logo.png")}} alt="Menjar Logo" /></div>
+    </header><table>
+	{% for i in range(6) %}
+	<tr>
+		{% for row in data %}
+		<td>
+			<a href="/removeItem?mealId={{row[0]}}">
+			{% if i == 4 %}
+				<img src={{ url_for('static', filename='uploads/' + row[i]) }} id="itemImage" />
+			{% else %}
+				{{row[i]}}
+			{% endif %}
+			</a>
+		</td>
+		{% endfor %}
+	</tr>
+	{% endfor %}
+</table>
+</body>
+</html>
