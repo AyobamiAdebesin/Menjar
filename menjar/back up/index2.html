@@ -73,7 +73,7 @@
                 <!-- <button class="main_button" type="button">ONLINE ORDER</button> -->
 
                 <!-- Sign UP Modal -->
-                <div class="modal fade" id="sign_up_box" tabindex="-1" role="dialog" aria-hidden="true">
+                <div class="modal fade" id="sign_up_box" tabindex="-1" role="dialog" aria-labelledby="sign_up_boxTitle" aria-hidden="true">
                     <div class="modal-dialog modal-dialog-centered" role="document">
                         <div class="modal-content">
                             <div class="modal-body p-5">
@@ -114,7 +114,7 @@
 
                 <!-- Log In Modal -->
 
-                <div class="modal fade" id="log_in_box" tabindex="-1" role="dialog" aria-hidden="true">
+                <div class="modal fade" id="log_in_box" tabindex="-1" role="dialog" aria-labelledby="log_in_boxTitle" aria-hidden="true">
                     <div class="modal-dialog modal-dialog-centered" role="document">
                         <div class="modal-content">
                             <div class="modal-body p-5">
@@ -148,48 +148,14 @@
                         </div>
                     </div>
                 </div>
-                <!-- Button trigger modal -->
-                <button type="button" class="btn cart_button" data-toggle="modal" data-target="#exampleModalCenter">
+                <button class="cart_button" type="button" data-toggle="modal" data-target="#cart_box">
                     <i class="fa fa-cart-plus cart" aria-hidden="true"></i>
-
+                    <span>( 0 )</span>
                 </button>
-
-                <!-- Modal -->
-                <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-centered mw-100 w-75" role="document">
-                        <div class="modal-content p-5">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLongTitle">Menjar</h5>
-
-                            </div>
-                            <div class="modal-body">
-                                <h2 class="section-header">CART</h2>
-                                <div class="cart-row">
-                                    <span class="cart-item cart-header cart-column">ITEM</span>
-                                    <span class="cart-price cart-header cart-column">PRICE</span>
-                                    <span class="cart-quantity cart-header cart-column">QUANTITY</span>
-                                </div>
-                                <div class="cart-items">
-
-                                </div>
-                                <div class="cart-total">
-                                    <strong class="cart-total-title">Total</strong>
-                                    <span class="cart-total-price">0</span>
-                                </div>
-                                <button class="btn main_button btn-purchase" type="button">PURCHASE</button>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancle Order</button>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
 
             </div>
         </div>
     </section>
-    <button onclick="topFunction()" id="myBtn" class="myBtn" title="Go to top"><i class="fa fa-chevron-circle-up" aria-hidden="true"></i></button>
     <main>
         <section id="hero_section">
             <article class="bg hero_section text-white">
@@ -244,69 +210,49 @@
                 </div>
                 <div class="row combos">
                     <div class="combo_card col-lg-3 col-md-4 col-sm-12">
-                        <div class="">
-                            <h2 class="menu_title">Pounded yam with Efo</h2>
-                            <p>
-                                Its common to serve the pounded yam alongside some soup, such as
-                                a vegetable stew.
-                            </p>
-                        </div>
-
-                        <div class="">
-                            <h2 class="combo_price menu_price">₦3500</h2>
-                            <button class="combo_button order_button" type="button">ORDER NOW</button>
-                        </div>
+                        <h2>Pounded Yam</h2>
+                        <p>
+                            Its common to serve the pounded yam alongside some soup, such as
+                            a vegetable stew.
+                        </p>
+                        <h2 class="combo_price">₦3,500</h2>
+                        <button class="combo_button" type="button">ORDER NOW</button>
                         <div>
-                            <img src="images/efo-riro.png" alt="" />
+                            <img src="images/iyan _ efo riro.png" alt="" />
                         </div>
                     </div>
                     <div class="combo_card col-lg-3 col-md-4 col-sm-12">
-                        <div class="">
-                            <h2 class="menu_title">Ewa Agoyin</h2>
-                            <p>
-                                Its common to serve the pounded yam alongside some soup, such as
-                                a vegetable stew.
-                            </p>
-                        </div>
-
-                        <div class="">
-                            <h2 class="combo_price menu_price">₦2000</h2>
-                            <button class="combo_button order_button" type="button">ORDER NOW</button>
-                        </div>
+                        <h2>Ewa Agoyin</h2>
+                        <p>
+                            Its common to serve the pounded yam alongside some soup, such as
+                            a vegetable stew.
+                        </p>
+                        <h2 class="combo_price">₦3,500</h2>
+                        <button class="combo_button" type="button">ORDER NOW</button>
                         <div>
                             <img src="images/ewa-agoyin-1.jpg.png" alt="" />
                         </div>
                     </div>
                     <div class="combo_card col-lg-3 col-md-4 col-sm-12">
-                        <div class="">
-                            <h2 class="menu_title">Eba with Afang</h2>
-                            <p>
-                                Its common to serve the pounded yam alongside some soup, such as
-                                a vegetable stew.
-                            </p>
-                        </div>
-
-                        <div class="">
-                            <h2 class="combo_price menu_price">₦4000</h2>
-                            <button class="combo_button order_button" type="button">ORDER NOW</button>
-                        </div>
+                        <h2>Eba (Garri)</h2>
+                        <p>
+                            Its common to serve the pounded yam alongside some soup, such as
+                            a vegetable stew.
+                        </p>
+                        <h2 class="combo_price">₦3,500</h2>
+                        <button class="combo_button" type="button">ORDER NOW</button>
                         <div>
                             <img src="images/nigerian-food-garri.jpg.png" alt="" />
                         </div>
                     </div>
                     <div class="combo_card col-lg-3 col-md-4 col-sm-12">
-                        <div class="">
-                            <h2 class="menu_title">Fufu with Egusi soup</h2>
-                            <p>
-                                Its common to serve the pounded yam alongside some soup, such as
-                                a vegetable stew.
-                            </p>
-                        </div>
-
-                        <div class="">
-                            <h2 class="combo_price menu_price">₦3500</h2>
-                            <button class="combo_button order_button" type="button">ORDER NOW</button>
-                        </div>
+                        <h2>Egusi Soup</h2>
+                        <p>
+                            Its common to serve the pounded yam alongside some soup, such as
+                            a vegetable stew.
+                        </p>
+                        <h2 class="combo_price">₦3,500</h2>
+                        <button class="combo_button" type="button">ORDER NOW</button>
                         <div>
                             <img src="images/nigerian-food-egusi-soup.jpg.png" alt="" />
                         </div>
@@ -438,15 +384,18 @@
                                 <h5>RECOMMENDED</h5>
                                 <div class="menu_food">
                                     <div>
-                                        <h4 class="menu_title">Fufu with Afang Soup</h4>
+                                        <a href="">
+                                            <h4>Amala with Ewedu and Gbegiri</h4>
+                                        </a>
                                         <p>
                                             Can come with goat meat, ponmo, shrimps, chicken and
                                             turkey. Choice of side also allowed
                                         </p>
                                     </div>
                                     <div>
-                                        <h4 class="menu_price">₦4000</h4>
-                                        <button class="order_button btn btn-warning text-dark" type="button" name="button"><i class="fa fa-cart-plus" aria-hidden="true"></i></button>
+                                        <h4 class="menu_price">₦3,500</h4>
+                                        <button class="order_button" type="button" name="button">Add to cart</button>
+
                                     </div>
                                 </div>
                             </div>
@@ -454,15 +403,17 @@
                                 <h5>NEW</h5>
                                 <div class="menu_food">
                                     <div>
-                                        <h4 class="menu_title">Garri with Edikaikong soup</h4>
+                                        <a href="">
+                                            <h4>Amala with Ewedu and Gbegiri</h4>
+                                        </a>
                                         <p>
                                             Can come with goat meat, ponmo, shrimps, chicken and
                                             turkey. Choice of side also allowed
                                         </p>
                                     </div>
                                     <div>
-                                        <h4 class="menu_price">₦4500</h4>
-                                        <button class="order_button btn btn-warning text-dark" type="button" name="button"><i class="fa fa-cart-plus" aria-hidden="true"></i></button>
+                                        <h4 class="menu_price">₦3,500</h4>
+                                        <button class="order_button" type="button" name="button"><i class="fa fa-cart-plus" aria-hidden="true"></i></button>
                                     </div>
                                 </div>
                             </div>
@@ -470,15 +421,17 @@
                                 <h5>RECOMMENDED</h5>
                                 <div class="menu_food">
                                     <div>
-                                        <h4 class="menu_title">Fufu with White Soup</h4>
+                                        <a href="">
+                                            <h4>Amala with Ewedu and Gbegiri</h4>
+                                        </a>
                                         <p>
                                             Can come with goat meat, ponmo, shrimps, chicken and
                                             turkey. Choice of side also allowed
                                         </p>
                                     </div>
                                     <div>
-                                        <h4 class="menu_price">₦5000</h4>
-                                        <button class="order_button btn btn-warning text-dark" type="button" name="button"><i class="fa fa-cart-plus" aria-hidden="true"></i></button>
+                                        <h4 class="menu_price">₦3,500</h4>
+                                        <button class="order_button" type="button" name="button"><i class="fa fa-cart-plus" aria-hidden="true"></i></button>
                                     </div>
                                 </div>
                             </div>
@@ -488,15 +441,17 @@
                                 <h5>NEW</h5>
                                 <div class="menu_food">
                                     <div>
-                                        <h4 class="menu_title">Garri with Afang Soup</h4>
+                                        <a href="">
+                                            <h4>Amala with Ewedu and Gbegiri</h4>
+                                        </a>
                                         <p>
                                             Can come with goat meat, ponmo, shrimps, chicken and
                                             turkey. Choice of side also allowed
                                         </p>
                                     </div>
                                     <div>
-                                        <h4 class="menu_price">₦4500</h4>
-                                        <button class="order_button btn btn-warning text-dark" type="button" name="button"><i class="fa fa-cart-plus" aria-hidden="true"></i></button>
+                                        <h4 class="menu_price">₦3,500</h4>
+                                        <button class="order_button" type="button" name="button"><i class="fa fa-cart-plus" aria-hidden="true"></i></button>
                                     </div>
                                 </div>
                             </div>
@@ -504,15 +459,17 @@
                                 <h5>Combo</h5>
                                 <div class="menu_food">
                                     <div>
-                                        <h4 class="menu_title">Fufu with Oha soup</h4>
+                                        <a href="">
+                                            <h4>Amala with Ewedu and Gbegiri</h4>
+                                        </a>
                                         <p>
                                             Can come with goat meat, ponmo, shrimps, chicken and
                                             turkey. Choice of side also allowed
                                         </p>
                                     </div>
                                     <div>
-                                        <h4 class="menu_price">₦3000</h4>
-                                        <button class="order_button btn btn-warning text-dark" type="button" name="button"><i class="fa fa-cart-plus" aria-hidden="true"></i></button>
+                                        <h4 class="menu_price">₦3,500</h4>
+                                        <button class="order_button" type="button" name="button"><i class="fa fa-cart-plus" aria-hidden="true"></i></button>
                                     </div>
                                 </div>
                             </div>
@@ -520,15 +477,17 @@
                                 <h5>RECOMMENDED</h5>
                                 <div class="menu_food">
                                     <div>
-                                        <h4 class="menu_title">Abacha</h4>
+                                        <a href="">
+                                            <h4>Amala with Ewedu and Gbegiri</h4>
+                                        </a>
                                         <p>
                                             Can come with goat meat, ponmo, shrimps, chicken and
                                             turkey. Choice of side also allowed
                                         </p>
                                     </div>
                                     <div>
-                                        <h4 class="menu_price">₦3500</h4>
-                                        <button class="order_button btn btn-warning text-dark" type="button" name="button"><i class="fa fa-cart-plus" aria-hidden="true"></i></button>
+                                        <h4 class="menu_price">₦3,500</h4>
+                                        <button class="order_button" type="button" name="button"><i class="fa fa-cart-plus" aria-hidden="true"></i></button>
                                     </div>
                                 </div>
                             </div>
@@ -542,15 +501,17 @@
                                 <h5>RECOMMENDED</h5>
                                 <div class="menu_food">
                                     <div>
-                                        <h4 class="menu_title">Fried Rice</h4>
+                                        <a href="">
+                                            <h4>Amala with Ewedu and Gbegiri</h4>
+                                        </a>
                                         <p>
                                             Can come with goat meat, ponmo, shrimps, chicken and
                                             turkey. Choice of side also allowed
                                         </p>
                                     </div>
                                     <div>
-                                        <h4 class="menu_price">₦3000</h4>
-                                        <button class="order_button btn btn-warning text-dark" type="button" name="button"><i class="fa fa-cart-plus" aria-hidden="true"></i></button>
+                                        <h4 class="menu_price">₦3,500</h4>
+                                        <button class="order_button" type="button" name="button"><i class="fa fa-cart-plus" aria-hidden="true"></i></button>
                                     </div>
                                 </div>
                             </div>
@@ -558,15 +519,17 @@
                                 <h5>NEW</h5>
                                 <div class="menu_food">
                                     <div>
-                                        <h4 class="menu_title">Jollof Rice</h4>
+                                        <a href="">
+                                            <h4>Amala with Ewedu and Gbegiri</h4>
+                                        </a>
                                         <p>
                                             Can come with goat meat, ponmo, shrimps, chicken and
                                             turkey. Choice of side also allowed
                                         </p>
                                     </div>
                                     <div>
-                                        <h4 class="menu_price">₦3000</h4>
-                                        <button class="order_button btn btn-warning text-dark" type="button" name="button"><i class="fa fa-cart-plus" aria-hidden="true"></i></button>
+                                        <h4 class="menu_price">₦3,500</h4>
+                                        <button class="order_button" type="button" name="button"><i class="fa fa-cart-plus" aria-hidden="true"></i></button>
                                     </div>
                                 </div>
                             </div>
@@ -574,15 +537,17 @@
                                 <h5>RECOMMENDED</h5>
                                 <div class="menu_food">
                                     <div>
-                                        <h4 class="menu_title">Coconut Rice</h4>
+                                        <a href="">
+                                            <h4>Amala with Ewedu and Gbegiri</h4>
+                                        </a>
                                         <p>
                                             Can come with goat meat, ponmo, shrimps, chicken and
                                             turkey. Choice of side also allowed
                                         </p>
                                     </div>
                                     <div>
-                                        <h4 class="menu_price">₦3000</h4>
-                                        <button class="order_button btn btn-warning text-dark" type="button" name="button"><i class="fa fa-cart-plus" aria-hidden="true"></i></button>
+                                        <h4 class="menu_price">₦3,500</h4>
+                                        <button class="order_button" type="button" name="button"><i class="fa fa-cart-plus" aria-hidden="true"></i></button>
                                     </div>
                                 </div>
                             </div>
@@ -592,15 +557,17 @@
                                 <h5>NEW</h5>
                                 <div class="menu_food">
                                     <div>
-                                        <h4 class="menu_title">Giz-dodo</h4>
+                                        <a href="">
+                                            <h4>Amala with Ewedu and Gbegiri</h4>
+                                        </a>
                                         <p>
                                             Can come with goat meat, ponmo, shrimps, chicken and
                                             turkey. Choice of side also allowed
                                         </p>
                                     </div>
                                     <div>
-                                        <h4 class="menu_price">₦3500</h4>
-                                        <button class="order_button btn btn-warning text-dark" type="button" name="button"><i class="fa fa-cart-plus" aria-hidden="true"></i></button>
+                                        <h4 class="menu_price">₦3,500</h4>
+                                        <button class="order_button" type="button" name="button"><i class="fa fa-cart-plus" aria-hidden="true"></i></button>
                                     </div>
                                 </div>
                             </div>
@@ -608,15 +575,17 @@
                                 <h5>Combo</h5>
                                 <div class="menu_food">
                                     <div>
-                                        <h4 class="menu_title">Pepper Soup</h4>
+                                        <a href="">
+                                            <h4>Amala with Ewedu and Gbegiri</h4>
+                                        </a>
                                         <p>
                                             Can come with goat meat, ponmo, shrimps, chicken and
                                             turkey. Choice of side also allowed
                                         </p>
                                     </div>
                                     <div>
-                                        <h4 class="menu_price">₦2500</h4>
-                                        <button class="order_button btn btn-warning text-dark" type="button" name="button"><i class="fa fa-cart-plus" aria-hidden="true"></i></button>
+                                        <h4 class="menu_price">₦3,500</h4>
+                                        <button class="order_button" type="button" name="button"><i class="fa fa-cart-plus" aria-hidden="true"></i></button>
                                     </div>
                                 </div>
                             </div>
@@ -624,15 +593,17 @@
                                 <h5>RECOMMENDED</h5>
                                 <div class="menu_food">
                                     <div>
-                                        <h4 class="menu_title">Stir fry Spaghetti</h4>
+                                        <a href="">
+                                            <h4>Amala with Ewedu and Gbegiri</h4>
+                                        </a>
                                         <p>
                                             Can come with goat meat, ponmo, shrimps, chicken and
                                             turkey. Choice of side also allowed
                                         </p>
                                     </div>
                                     <div>
-                                        <h4 class="menu_price">₦3000</h4>
-                                        <button class="order_button btn btn-warning text-dark" type="button" name="button"><i class="fa fa-cart-plus" aria-hidden="true"></i></button>
+                                        <h4 class="menu_price">₦3,500</h4>
+                                        <button class="order_button" type="button" name="button"><i class="fa fa-cart-plus" aria-hidden="true"></i></button>
                                     </div>
                                 </div>
                             </div>
@@ -643,99 +614,106 @@
                     <div class="accordion-content">
                         <div class="menu_box">
                             <div class="menu_items">
-
+                                <h5>RECOMMENDED</h5>
                                 <div class="menu_food">
                                     <div>
-                                        <h4 class="menu_title">Coca Cola</h4>
+                                        <a href="">
+                                            <h4>Amala with Ewedu and Gbegiri</h4>
+                                        </a>
                                         <p>
-                                            laudantium corrupti assumenda. Et, accusamus.
-                                            Vel libero architecto earum numquam quisquam deleniti atque a.
+                                            Can come with goat meat, ponmo, shrimps, chicken and
+                                            turkey. Choice of side also allowed
                                         </p>
                                     </div>
                                     <div>
-                                        <h4 class="menu_price">₦500</h4>
-                                        <button class="order_button btn btn-warning text-dark" type="button" name="button"><i class="fa fa-cart-plus" aria-hidden="true"></i></button>
+                                        <h4 class="menu_price">₦3,500</h4>
                                     </div>
                                 </div>
                             </div>
                             <div class="menu_items">
-
+                                <h5>NEW</h5>
                                 <div class="menu_food">
                                     <div>
-                                        <h4 class="menu_title">Fanta Orange</h4>
+                                        <a href="">
+                                            <h4>Amala with Ewedu and Gbegiri</h4>
+                                        </a>
                                         <p>
-                                            laudantium corrupti assumenda. Et, accusamus. Vel libero architecto earum numquam quisquam deleniti atque a.
+                                            Can come with goat meat, ponmo, shrimps, chicken and
+                                            turkey. Choice of side also allowed
                                         </p>
                                     </div>
                                     <div>
-                                        <h4 class="menu_price">₦500</h4>
-                                        <button class="order_button btn btn-warning text-dark" type="button" name="button"><i class="fa fa-cart-plus" aria-hidden="true"></i></button>
+                                        <h4 class="menu_price">₦3,500</h4>
                                     </div>
                                 </div>
                             </div>
                             <div class="menu_items">
-
+                                <h5>RECOMMENDED</h5>
                                 <div class="menu_food">
                                     <div>
-                                        <h4 class="menu_title">Sprite</h4>
+                                        <a href="">
+                                            <h4>Amala with Ewedu and Gbegiri</h4>
+                                        </a>
                                         <p>
-                                            laudantium corrupti assumenda. Et, accusamus.
-                                            Vel libero architecto earum numquam quisquam deleniti atque a.
+                                            Can come with goat meat, ponmo, shrimps, chicken and
+                                            turkey. Choice of side also allowed
                                         </p>
                                     </div>
                                     <div>
-                                        <h4 class="menu_price">₦500</h4>
-                                        <button class="order_button btn btn-warning text-dark" type="button" name="button"><i class="fa fa-cart-plus" aria-hidden="true"></i></button>
+                                        <h4 class="menu_price">₦3,500</h4>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="menu_box">
                             <div class="menu_items">
-
+                                <h5>NEW</h5>
                                 <div class="menu_food">
                                     <div>
-                                        <h4 class="menu_title">Mineral Water</h4>
+                                        <a href="">
+                                            <h4>Amala with Ewedu and Gbegiri</h4>
+                                        </a>
                                         <p>
-                                            Claudantium corrupti assumenda. Et, accusamus.
-                                            Vel libero architecto earum numquam quisquam deleniti.
+                                            Can come with goat meat, ponmo, shrimps, chicken and
+                                            turkey. Choice of side also allowed
                                         </p>
                                     </div>
                                     <div>
-                                        <h4 class="menu_price">₦500</h4>
-                                        <button class="order_button btn btn-warning text-dark" type="button" name="button"><i class="fa fa-cart-plus" aria-hidden="true"></i></button>
+                                        <h4 class="menu_price">₦3,500</h4>
                                     </div>
                                 </div>
                             </div>
                             <div class="menu_items">
-
+                                <h5>Combo</h5>
                                 <div class="menu_food">
                                     <div>
-                                        <h4 class="menu_title">Monstar Energy - Fury</h4>
+                                        <a href="">
+                                            <h4>Amala with Ewedu and Gbegiri</h4>
+                                        </a>
                                         <p>
-                                            laudantium corrupti assumenda. Et, accusamus.
-                                            Vel libero architecto earum numquam quisquam deleniti atque a.
+                                            Can come with goat meat, ponmo, shrimps, chicken and
+                                            turkey. Choice of side also allowed
                                         </p>
                                     </div>
                                     <div>
-                                        <h4 class="menu_price">₦1000</h4>
-                                        <button class="order_button btn btn-warning text-dark" type="button" name="button"><i class="fa fa-cart-plus" aria-hidden="true"></i></button>
+                                        <h4 class="menu_price">₦3,500</h4>
                                     </div>
                                 </div>
                             </div>
                             <div class="menu_items">
-
+                                <h5>RECOMMENDED</h5>
                                 <div class="menu_food">
                                     <div>
-                                        <h4 class="menu_title">Monster Energy - Regular</h4>
+                                        <a href="">
+                                            <h4>Amala with Ewedu and Gbegiri</h4>
+                                        </a>
                                         <p>
-                                            audantium corrupti assumenda. Et, accusamus.
-                                            Vel libero architecto earum numquam quisquam deleniti atque a.
+                                            Can come with goat meat, ponmo, shrimps, chicken and
+                                            turkey. Choice of side also allowed
                                         </p>
                                     </div>
                                     <div>
-                                        <h4 class="menu_price">₦1000</h4>
-                                        <button class="order_button btn btn-warning text-dark" type="button" name="button"><i class="fa fa-cart-plus" aria-hidden="true"></i></button>
+                                        <h4 class="menu_price">₦3,500</h4>
                                     </div>
                                 </div>
                             </div>
@@ -744,7 +722,48 @@
                 </div>
             </article>
         </section>
+        <div class="modal fade" id="cart_box" tabindex="-1" role="dialog"  aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-body cart_body p-5">
+                    <h2 class="section-header">CART</h2>
+                    <div class="cart-row">
+                        <span class="cart-item cart-header cart-column">ITEM</span>
+                        <span class="cart-price cart-header cart-column">PRICE</span>
+                        <span class="cart-quantity cart-header cart-column">QUANTITY</span>
+                    </div>
+                    <div class="cart-items">
 
+                    </div>
+                    <div class="cart-total">
+                        <strong class="cart-total-title">Total</strong>
+                        <span class="cart-total-price">0</span>
+                    </div>
+                    <button class="btn main_button btn-purchase" type="button">PURCHASE</button>
+
+                </div>
+
+            </div>
+
+        </div>
+        <!-- <section class="bg-white">
+            <article class="bg main-cart text-center">
+                <h2 class="section-header">CART</h2>
+                <div class="cart-row">
+                    <span class="cart-item cart-header cart-column">ITEM</span>
+                    <span class="cart-price cart-header cart-column">PRICE</span>
+                    <span class="cart-quantity cart-header cart-column">QUANTITY</span>
+                </div>
+                <div class="cart-items">
+
+                </div>
+                <div class="cart-total">
+                    <strong class="cart-total-title">Total</strong>
+                    <span class="cart-total-price">0</span>
+                </div>
+                <button class="btn main_button btn-purchase" type="button">PURCHASE</button>
+
+            </article>
+        </section> -->
         <section id="delivery">
             <article class="delivery bg row">
                 <div class="delivery_main col-lg-4 col-md-12 col-sm-12">
