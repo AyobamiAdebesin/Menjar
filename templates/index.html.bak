@@ -68,133 +68,131 @@
                 </div>
             </nav>
         </div>
-
+       
         {% if not loggedIn %}
-        <div class="order">
-            <button class="main_button_inverse" type="button" name="button" data-toggle="modal" data-target="#sign_up_box">Sign Up</button>
-
-            <button class="main_button" type="button" name="button" data-toggle="modal" data-target="#log_in_box">Login</button>
-            <!-- <button class="main_button" type="button">ONLINE ORDER</button> -->
-
-            <!-- Sign UP Modal -->
-            <div class="modal fade" id="sign_up_box" tabindex="-1" role="dialog" aria-labelledby="sign_up_boxTitle" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered" role="document">
-                    <div class="modal-content">
-                        <div class="modal-body p-5">
-
-                            <div class="text-center mb-4">
-                                <h2>Sign Up</h2>
-
-                            </div>
-                            <form class="" action="/register" method="POST" onsubmit="return validate()">
-                                <div class="form-floating mb-3">
-                                    <input type="text" name="firstName" class="form-control" id="floatingInput"
-                                    placeholder="First Name">
-                                <label for="floatingInput">First Name</label>
-                            </div>
-                                <div class="form-floating mb-3">
-                                    <input type="text" name="lastName" class="form-control" id="floatingInput"
-                                        placeholder="Last name">
-                                    <label for="floatingInput">Last Name</label>
+   
+            <div class="order">
+                <button class="main_button_inverse" type="button" name="button" data-toggle="modal"
+                    data-target="#sign_up_box">Sign Up</button>
+    
+                <button class="main_button" type="button" name="button" data-toggle="modal"
+                    data-target="#log_in_box">Login</button>
+                <!-- <button class="main_button" type="button">ONLINE ORDER</button> -->
+    
+                <!-- Sign UP Modal -->
+                <div class="modal fade" id="sign_up_box" tabindex="-1" role="dialog" aria-labelledby="sign_up_boxTitle"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-body p-5">
+    
+                                <div class="text-center mb-4">
+                                    <h2>Sign Up</h2>
+    
                                 </div>
+                                <form class="" action="/register" method="POST" onsubmit="return validate()">
                                     <div class="form-floating mb-3">
-                                        <input type="text" name="state" class="form-control" id="floatingInput"
-                                            placeholder="State">
-                                        <label for="floatingInput">State</label>
+                                        <input type="text" name="firstName" class="form-control" id="floatingInput"
+                                            placeholder="First Name">
+                                        <label for="floatingInput">First Name</label>
                                     </div>
-                                    <div class="form-floating mb-3">
-                                        <input type="email" name="email" class="form-control" id="floatingInput"
-                                            placeholder="name@example.com">
-                                        <label for="floatingInput">Email address</label>
-                                    </div>
-                                    <div class="form-floating mb-3">
-                                        <input type="text" name="phone" class="form-control" id="floatingInput"
-                                            placeholder="Phone Number">
-                                        <label for="floatingInput">Phone Number</label>
-                                    </div>
-                                    <div class="form-floating mb-3">
-                                        <input type="password" name="password" class="form-control"
-                                            id="floatingPassword" placeholder="Password">
-                                        <label for="floatingPassword">Password</label>
-                                    </div>
-                                    <div class="form-floating mb-5">
-                                        <input type="password" name="cpassword" class="form-control"
-                                            id="cfloatingPassword" placeholder="Confirm Password">
-                                        <label for="floatingPassword">Confirm Password</label>
-                                </div>
+                                        <div class="form-floating mb-3">
+                                            <input type="text" name="lastName" class="form-control" id="floatingInput"
+                                                placeholder="Last name">
+                                            <label for="floatingInput">Last Name</label>
+                                        </div>
+                                            <div class="form-floating mb-3">
+                                                <input type="text" name="state" class="form-control" id="floatingInput"
+                                                    placeholder="State">
+                                                <label for="floatingInput">State</label>
+                                            </div>
+                                            <div class="form-floating mb-3">
+                                                <input type="email" name="email" class="form-control" id="floatingInput"
+                                                    placeholder="name@example.com">
+                                                <label for="floatingInput">Email address</label>
+                                            </div>
+                                            <div class="form-floating mb-3">
+                                                <input type="text" name="phone" class="form-control" id="floatingInput"
+                                                    placeholder="Phone Number">
+                                                <label for="floatingInput">Phone Number</label>
+                                            </div>
+                                            <div class="form-floating mb-3">
+                                                <input type="password" name="password" class="form-control"
+                                                    id="floatingPassword" placeholder="Password">
+                                                <label for="floatingPassword">Password</label>
+                                            </div>
+                                            <div class="form-floating mb-5">
+                                                <input type="password" name="cpassword" class="form-control"
+                                                    id="cfloatingPassword" placeholder="Confirm Password">
+                                                <label for="floatingPassword">Confirm Password</label>
 
-                                <div class="text-center">
-                                    <button class="btn btn-danger btn-lg" type="submit" name="button">Sign Up</button>
-
-                                </div>
-                            </form>
-
-                        </div>
-                        <div class="modal-footer justify-content-center">
-                            <div class="pt-2">
-                                <p>Already have an account? <a class="text-danger " data-toggle="modal" data-target="#log_in_box" href="#log_in_box">Log In</a> </p>
+                                                
+                                            <div class="text-center">
+                                                <button class="btn btn-danger btn-lg" type="submit" name="button">Sign
+                                                    Up</button>
+    
+                                            </div>
+                                        </form>
+    
                             </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Log In Modal -->
-            <div class="modal fade" id="log_in_box" tabindex="-1" role="dialog" aria-labelledby="log_in_boxTitle" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered" role="document">
-                    <div class="modal-content">
-                        <div class="modal-body p-5">
-
-                            <div class="text-center mb-4">
-                                <h2>Log In</h2>
-
-                            </div>
-                            <form action="/login" method="POST">
-                                <div class="form-floating mb-3">
-                                    <input type="text" name="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-                                    <label for="floatingInput">Email address</label>
+                            <div class="modal-footer justify-content-center">
+                                <div class="pt-2">
+                                    <p>Already have an account? <a class="text-danger " data-toggle="modal"
+                                            data-target="#log_in_box" href="#log_in_box">Log In</a> </p>
                                 </div>
-                                <div class="form-floating mb-5">
-                                    <input type="text" name="password" class="form-control" id="floatingPassword" placeholder="Password">
-                                    <label for="floatingPassword">Password</label>
-                                </div>
-
-                                <div class="text-center">
-                                    <button class="main_button" type="submit" name="button">Log In</button>
-
-                                </div>
-                            </form>
-
-                        </div>
-                        <div class="modal-footer justify-content-center">
-                            <div class="pt-2">
-                                <p>You don't have an account? <a class="text-danger" href="#sign_up_box" data-toggle="modal" data-target="#sign_up_box">Sign Up</a> </p>
                             </div>
                         </div>
                     </div>
                 </div>
+    
+                <!-- Log In Modal -->
+                <div class="modal fade" id="log_in_box" tabindex="-1" role="dialog" aria-labelledby="log_in_boxTitle"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-body p-5">
+    
+                                <div class="text-center mb-4">
+                                    <h2>Log In</h2>
+                                    <form action="/login" method="POST">
+                                        <p>Email: <input type="text" name="email" class="form-control" id="floatingPassword" placeholder="name@example.com"></p>
+                                        <p>Password: <input type="password" name="password" class="form-control" id="floatingPassword" placeholder="Password"></p>
+                                        <p><input type="submit" class="main_button" ></p>
+                                        <a href="/registerationForm">Register here</a>
+                                    </form>
+                                </div>
+    
+                            </div>
+                            <div class="modal-footer justify-content-center">
+                                <div class="pt-2">
+                                    <p>You don't have an account? <a class="text-danger" href="/registerationForm"
+                                            data-toggle="modal" data-target="#sign_up_box">Sign Up</a> </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a href="/cart">
+                    <i class="fa fa-cart-plus cart" aria-hidden="true"></i>
+                </a>
             </div>
         </div>
-    </div>
-    {% else %}
-    <div class="dropdown">
-        <button class="dropbtn">Hello, {{firstName}}</button>
-        <div class="dropdown-content">
-            <a href="/checkout">Check out</a>
-            <a href="/cart">Cart</a>
-            <hr>
-            <a href="/manager">Manage Categories and Meal Items</a>
-            <a href="/manageMeals">Manage Meals</a>
-            <a href="/manageCategory">Manage categories</a>
-            <a href="/logout">Sign Out</a>
+        {% else %}
+        <div class="dropdown">
+            <button class="dropbtn">Hello, {{firstName}}</button>
+            <div class="dropdown-content">
+                <a href="/checkout">Check out</a>
+                <a href="/cart">Cart</a>
+                <hr>
+                <a href="/manager">Manage Categories and Meal Items</a>
+                <a href="/manageMeals">Manage Meals</a>
+                <a href="/manageCategory">Manage categories</a>
+                <a href="/logout">Sign Out</a>
+            </div>
         </div>
-    </div>
-    <a href="/cart">
-        <i class="fa fa-cart-plus cart" aria-hidden="true"></i>
-    </a>
-    {% endif %}
-</div>
+        {% endif %}
 
+        
     <main>
         <section id="hero_section">
             <article class="bg hero_section text-white">
@@ -204,10 +202,12 @@
                         <h1 class="hero_heading">
                             POUNDED YAM WITH EFO-RIRO AND GOAT MEAT
                         </h1>
+                        <div class="display">
+                            <div class="col-lg-5 col-sm-12">
+                                <img class="hero_img" src= {{url_for('static', filename="images/pounded_yam-removebg-preview.png", alt="hero image")}} />
+                            </div>
                     </div>
-                    <div class="col-lg-5 col-sm-12">
-                        <img class="hero_img" src= {{url_for('static', filename="images/pounded_yam-removebg-preview.png", alt="hero image")}} />
-                    </div>
+
                 </div>
 
                 <div class="hero_box row">
@@ -224,7 +224,7 @@
                 </div>
             </article>
         </section>
-                <div class="displayCategory">
+        <div class="displayCategory">
             <h2>Shop by Category: </h2>
             <ul>
                 {% for row in categoryData %}
@@ -235,8 +235,7 @@
         <section id="about_us" class="text-dark bg-white">
             <article class="row about_us bg">
                 <div class="col">
-                    <img class="about_us_img" src= {{url_for('static', filename="images/Nigerian-Food-Agege-Bread-1536x1025.png")}} alt="" />
-                </div>
+                    <img class="hero_img" src= {{url_for('static', filename="images/Nigerian-Food-Agege-Bread-1536x1025.png")}} /></div>
                 <div class="about_us_info col">
                     <h1 class="about_us_main">We make the best Healthy Local dish in Lasgidi</h1>
                     <p>
@@ -265,8 +264,8 @@
                         <h2 class="combo_price">₦3,500</h2>
                         <button class="combo_button" type="button">ORDER NOW</button>
                         <div>
-                            <img src= {{url_for('static', filename="images/iyan _ efo riro.png")}} alt="" />
-                        </div>
+                            <img class="hero_img" src= {{url_for('static', filename="images/iyan _ efo riro.png")}}  alt="" />
+</div>
                     </div>
                     <div class="combo_card col-lg-3 col-md-4 col-sm-12">
                         <h2>Ewa Agoyin</h2>
@@ -277,8 +276,8 @@
                         <h2 class="combo_price">₦3,500</h2>
                         <button class="combo_button" type="button">ORDER NOW</button>
                         <div>
-                            <img src= {{url_for('static', filename="images/ewa-agoyin-1.jpg.png")}} alt="" />
-                        </div>
+                            
+<img class="hero_img" src= {{url_for('static', filename="images/ewa-agoyin-1.jpg.png")}} /></div>
                     </div>
                     <div class="combo_card col-lg-3 col-md-4 col-sm-12">
                         <h2>Eba (Garri)</h2>
@@ -289,7 +288,7 @@
                         <h2 class="combo_price">₦3,500</h2>
                         <button class="combo_button" type="button">ORDER NOW</button>
                         <div>
-                            <img src= {{url_for('static', filename="images/nigerian-food-garri.jpg.png")}} alt="" />
+                            <img class="hero_" src= {{url_for('static', filename="images/nigerian-food-garri.jpg.png")}} />
                         </div>
                     </div>
                     <div class="combo_card col-lg-3 col-md-4 col-sm-12">
@@ -301,8 +300,7 @@
                         <h2 class="combo_price">₦3,500</h2>
                         <button class="combo_button" type="button">ORDER NOW</button>
                         <div>
-                            <img src= {{url_for('static', filename="images/nigerian-food-egusi-soup.jpg.png")}} alt="" />
-                        </div>
+                            <img class="hero_img" src= {{url_for('static', filename="images/nigerian-food-egusi-soup.jpg.png")}} />                        </div>
                     </div>
                 </div>
             </article>
@@ -1081,6 +1079,7 @@ alt="" />
                 </div>
             </article>
 </div>
+
     </footer>
 
 
