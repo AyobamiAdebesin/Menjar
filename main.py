@@ -93,22 +93,17 @@ def register():
         # Parse form data
         password = request.form['password']
         email = request.form['email']
-        firstName = request.form['firstName']
-        lastName = request.form['lastName']
-        state = request.form['state']
-        phone = request.form['phone']
+        user_name = request.form['user_name']
 
         with sqlite3.connect('database.db') as con:
             try:
                 cur = con.cursor()
-                cur.execute('INSERT INTO users (password, email, firstName, lastName, state, phone) VALUES (?, ?, ?, ?, ?, ?)', (hashlib.md5(
-                    password.encode()).hexdigest(), email, firstName, lastName, state, phone))
+                cur.execute('INSERT INTO users (password, email, firstName) VALUES (?, ?, ?)', (hashlib.md5(
+                    password.encode()).hexdigest(), email, user_name))
 
                 con.commit()
-                flash("Registered Successfully")
             except:
                 con.rollback()
-                flash("Error occured")
         con.close()
         return render_template("index.html")
 
