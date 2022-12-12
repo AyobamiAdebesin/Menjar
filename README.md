@@ -54,7 +54,7 @@ The major features of the web app include;
 To-do list:
 * Include a profile page for users after sign up.
 * Include an improved database
-* Include a seperate contatc page.
+* Include a seperate contact page.
 * Include a seperate menu page
 * Include a seperate Gallery page
 
