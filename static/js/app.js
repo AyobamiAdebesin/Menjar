@@ -26,17 +26,24 @@ function ready() {
     }
 
     $('.btn-purchase')[0].addEventListener('click', purchaseClicked)
+    $('.btn main_button btn-lg')[0].addEventListener('click', required)
 }
 
-/*function purchaseClicked() {
+function purchaseClicked() {
     alert('Thank you for your purchase')
     var cartItems = $('.cart-items')[0]
-    while (cartItems.hasChildNodes()) {
-        cartItems.removeChild(cartItems.firstChild)
-    }
+
     updateCartTotal()
 }
-*/
+function required(inputtx) {
+    if (inputtx.value.length == 0) {
+        alert("Can't be empty");
+        return false;
+    }
+    alert("Signed up Successfuly");
+    return true;
+}
+
 function removeCartItem(event) {
     var buttonClicked = event.target
     buttonClicked.parentElement.parentElement.remove()
