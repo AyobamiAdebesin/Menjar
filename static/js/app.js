@@ -26,7 +26,7 @@ function ready() {
     }
 
     $('.btn-purchase')[0].addEventListener('click', purchaseClicked)
-    $('.btn main_button btn-lg')[0].addEventListener('click', required)
+    $('.btn main_button btn-lg')[0].addEventListener('click', signupClicked)
 }
 
 function purchaseClicked() {
@@ -35,13 +35,8 @@ function purchaseClicked() {
 
     updateCartTotal()
 }
-function required(inputtx) {
-    if (inputtx.value.length == 0) {
-        alert("Can't be empty");
-        return false;
-    }
-    alert("Signed up Successfuly");
-    return true;
+function success() {
+    alert("Signed up Successfully, Please Login");
 }
 
 function removeCartItem(event) {
