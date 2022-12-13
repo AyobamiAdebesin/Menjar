@@ -26,17 +26,19 @@ function ready() {
     }
 
     $('.btn-purchase')[0].addEventListener('click', purchaseClicked)
+    $('.btn main_button btn-lg')[0].addEventListener('click', signupClicked)
 }
 
-/*function purchaseClicked() {
+function purchaseClicked() {
     alert('Thank you for your purchase')
     var cartItems = $('.cart-items')[0]
-    while (cartItems.hasChildNodes()) {
-        cartItems.removeChild(cartItems.firstChild)
-    }
+
     updateCartTotal()
 }
-*/
+function success() {
+    alert("Signed up Successfully, Please Login");
+}
+
 function removeCartItem(event) {
     var buttonClicked = event.target
     buttonClicked.parentElement.parentElement.remove()

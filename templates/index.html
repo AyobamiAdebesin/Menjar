@@ -87,7 +87,7 @@
                                     <h2>Sign Up</h2>
 
                                 </div>
-                                <form class="" action="/register" method="post">
+                                <form class="" action="/register" method="post" onsubmit="required()">
                                     <div class="form-floating mb-3">
                                         <input type="text" name="user_name" class="form-control" id="floatingInput" placeholder="name@example.com">
                                         <label for="floatingInput">User Name</label>
@@ -106,7 +106,7 @@
                                     </div>
 
                                     <div class="text-center">
-                                        <button class="btn main_button btn-lg" type="submit" name="button">Sign Up</button>
+                                        <button class="btn main_button btn-lg" onclick="success()"type="submit" name="button">Sign Up</button>
 
                                     </div>
                                 </form>
